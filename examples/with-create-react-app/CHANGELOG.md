@@ -1,5 +1,13 @@
 # with-create-react-app
 
+## 0.1.87
+
+### Patch Changes
+
+- Updated dependencies [8841891]
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.0
+
 ## 0.1.86
 
 ### Patch Changes

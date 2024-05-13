@@ -1,5 +1,13 @@
 # rainbowkit-next-app
 
+## 0.0.90
+
+### Patch Changes
+
+- Updated dependencies [8841891]
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.0
+
 ## 0.0.89
 
 ### Patch Changes
