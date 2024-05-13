@@ -183,7 +183,7 @@ export function useWalletConnectors(
     if (eip6963 || isAptosWallet) {
       walletConnectors.push({
         ...wallet,
-        iconUrl: wallet.icon!,
+        iconUrl: isAptosWallet ? wallet.iconUrl : wallet.icon!,
         ready: true,
         connect: () => connectWallet(wallet),
         groupName: 'Installed',
