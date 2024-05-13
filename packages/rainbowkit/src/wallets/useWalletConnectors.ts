@@ -14,6 +14,7 @@ import {
 } from './downloadUrls';
 import {
   connectorsWithRecentWallets,
+  isAptosConnector,
   isEIP6963Connector,
   isRainbowKitConnector,
   isRecentWallet,
@@ -175,10 +176,11 @@ export function useWalletConnectors(
     if (!wallet) continue;
 
     const eip6963 = isEIP6963Connector(wallet);
+    const isAptosWallet = isAptosConnector(wallet);
 
     const recent = isRecentWallet(recentWallets, wallet.id);
 
-    if (eip6963) {
+    if (eip6963 || isAptosWallet) {
       walletConnectors.push({
         ...wallet,
         iconUrl: wallet.icon!,
