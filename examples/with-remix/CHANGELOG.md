@@ -1,5 +1,12 @@
 # with-remix
 
+## 0.0.88
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.1
+
 ## 0.0.87
 
 ### Patch Changes

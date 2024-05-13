@@ -1,5 +1,12 @@
 # @merkletrade/rainbow-button
 
+## 0.2.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.1
+
 ## 0.2.8
 
 ### Patch Changes

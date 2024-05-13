@@ -1,5 +1,14 @@
 # example
 
+## 0.0.99
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.1
+  - @merkletrade/rainbow-button@0.2.9
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.1
+
 ## 0.0.98
 
 ### Patch Changes

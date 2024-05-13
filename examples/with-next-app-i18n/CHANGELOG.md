@@ -1,5 +1,12 @@
 # with-next-app-i18n
 
+## 0.0.37
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.1
+
 ## 0.0.36
 
 ### Patch Changes
