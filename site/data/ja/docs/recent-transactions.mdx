@@ -14,7 +14,7 @@ RainbowKitのアカウントモーダル内に最近の取引を表示するよ�
 この機能を使用するには、まず`RainbowKitProvider`の`showRecentTransactions`オプションを有効にします。
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 取引は、`useAddRecentTransaction`フックを使用してRainbowKitに登録できます。
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ export default () => {
 デフォルトでは、トランザクションが採掘されたブロックの上に単一のブロックが採掘された時点で、トランザクションは完了と見なされますが、カスタムな `confirmations` の値を指定することによってこれを設定することができます。
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

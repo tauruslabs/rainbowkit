@@ -1,10 +1,10 @@
-# @rainbow-me/create-rainbowkit
+# @merkletrade/create-rainbowkit
 
 ## 0.3.3
 
 ### Patch Changes
 
-- ef53ede: Added `--legacy-peer-deps` flag when running `npm init @rainbow-me/rainbowkit@latest`.
+- ef53ede: Added `--legacy-peer-deps` flag when running `npm init @merkletrade/rainbowkit@latest`.
 
 ## 0.3.2
 
@@ -110,7 +110,7 @@
 
 ### Patch Changes
 
-- 371c988: Adopted `fs`, `net`, and `tls` polyfills in the `@rainbow-me/create-rainbowkit` templates for better `wagmi@1` and `viem` Webpack bundler support.
+- 371c988: Adopted `fs`, `net`, and `tls` polyfills in the `@merkletrade/create-rainbowkit` templates for better `wagmi@1` and `viem` Webpack bundler support.
 
   These modules are required by WalletConnect packages upstream, and were previously polyfilled by `ethers`. Reference the discussion [here](https://github.com/wagmi-dev/wagmi/issues/2300#issuecomment-1541425648).
 
@@ -120,12 +120,12 @@
 
 - 93b58d0: RainbowKit and the [wagmi](https://wagmi.sh) peer dependency have been updated to `1.x.x`, which includes [breaking changes](https://wagmi.sh/react/migration-guide#1xx-breaking-changes).
 
-  wagmi v1 now relies on `viem` instead of the `ethers` peer dependency, so `@rainbow-me/create-rainbowkit` templates have been upgraded to favor [viem](https://viem.sh/).
+  wagmi v1 now relies on `viem` instead of the `ethers` peer dependency, so `@merkletrade/create-rainbowkit` templates have been upgraded to favor [viem](https://viem.sh/).
 
   Give RainbowKit and [wagmi v1](https://wagmi.sh/react/migration-guide#1xx-breaking-changes) a try today:
 
   ```bash
-  yarn create @rainbow-me/rainbowkit
+  yarn create @merkletrade/rainbowkit
   ```
 
 ## 0.1.11
@@ -216,7 +216,7 @@
 
 - fd5e8e7: Fix install step in Yarn
 
-  The `install` command for `@rainbow-me/create-rainbowkit` was failing when using `yarn create` because Yarn uses `add` instead of `install`, so we now use the correct command when Yarn is detected.
+  The `install` command for `@merkletrade/create-rainbowkit` was failing when using `yarn create` because Yarn uses `add` instead of `install`, so we now use the correct command when Yarn is detected.
 
 ## 0.0.3
 

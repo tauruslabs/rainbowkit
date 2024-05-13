@@ -4,7 +4,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   lightTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { Badge } from 'components/Badge/Badge';
 import { Box } from 'components/Box/Box';
 import { Text } from 'components/Text/Text';

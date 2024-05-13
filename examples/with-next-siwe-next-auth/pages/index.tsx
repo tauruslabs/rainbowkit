@@ -1,4 +1,4 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 import type { GetServerSideProps, NextPage } from 'next';
 import { getServerSession } from 'next-auth';
 import { getAuthOptions } from './api/auth/[...nextauth]';

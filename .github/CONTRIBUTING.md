@@ -2,13 +2,13 @@
 
 Thanks for your interest in contributing to RainbowKit! Please take a moment to review this document **before submitting a pull request.**
 
-If you want to contribute but aren't sure where to start, you can create a [new discussion](https://github.com/rainbow-me/rainbowkit/discussions).
+If you want to contribute but aren't sure where to start, you can create a [new discussion](https://github.com/merkletrade/rainbowkit/discussions).
 
 ## Pull requests
 
 **Please ask first before starting work on any significant new features. This includes things like adding new wallets, chains, components, etc.**
 
-It's never a fun experience to have your pull request declined after investing a lot of time and effort into a new feature. To avoid this from happening, we request that contributors create [a feature request](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas) to first discuss any API changes or significant new ideas.
+It's never a fun experience to have your pull request declined after investing a lot of time and effort into a new feature. To avoid this from happening, we request that contributors create [a feature request](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas) to first discuss any API changes or significant new ideas.
 
 ## Prerequisites
 
@@ -148,32 +148,32 @@ Once you’ve pushed the tag, you can create a new release on GitHub.
 
 #### If you published `rainbowkit`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/rainbowkit`.
-- Set the title to `@rainbow-me/rainbowkit@x.x.x` (substituting the latest version)
+- Go to [GitHub’s new release form.](https://github.com/merkletrade/rainbowkit/releases/new)
+- Select the latest version tag for `@merkletrade/rainbowkit`.
+- Set the title to `@merkletrade/rainbowkit@x.x.x` (substituting the latest version)
 - Copy the Markdown content below the latest version heading from [RainbowKit’s `CHANGELOG.md`](../packages/rainbowkit/CHANGELOG.md)
 
 #### If you published `rainbowkit-siwe-next-auth`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/rainbowkit-siwe-next-auth`.
-- Set the title to `@rainbow-me/rainbowkit-siwe-next-auth@x.x.x` (substituting the latest version)
+- Go to [GitHub’s new release form.](https://github.com/merkletrade/rainbowkit/releases/new)
+- Select the latest version tag for `@merkletrade/rainbowkit-siwe-next-auth`.
+- Set the title to `@merkletrade/rainbowkit-siwe-next-auth@x.x.x` (substituting the latest version)
 - Copy the Markdown content below the latest version heading from [rainbowkit-siwe-next-auth’s `CHANGELOG.md`](../packages/rainbowkit-siwe-next-auth/CHANGELOG.md)
 
 #### If you published `create-rainbowkit`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/create-rainbowkit`.
-- Set the title to `@rainbow-me/create-rainbowkit@x.x.x` (substituting the latest version)
+- Go to [GitHub’s new release form.](https://github.com/merkletrade/rainbowkit/releases/new)
+- Select the latest version tag for `@merkletrade/create-rainbowkit`.
+- Set the title to `@merkletrade/create-rainbowkit@x.x.x` (substituting the latest version)
 - Copy the Markdown content below the latest version heading from [create-rainbowkit’s `CHANGELOG.md`](../packages/create-rainbowkit/CHANGELOG.md)
 
 #### If you published `rainbow-button`:
 
-- Go to [GitHub’s new release form.](https://github.com/rainbow-me/rainbowkit/releases/new)
-- Select the latest version tag for `@rainbow-me/rainbow-button`.
-- Set the title to `@rainbow-me/rainbow-button@x.x.x` (substituting the latest version)
+- Go to [GitHub’s new release form.](https://github.com/merkletrade/rainbowkit/releases/new)
+- Select the latest version tag for `@merkletrade/rainbow-button`.
+- Set the title to `@merkletrade/rainbow-button@x.x.x` (substituting the latest version)
 - Copy the Markdown content below the latest version heading from [rainbow-button's `CHANGELOG.md`](../packages/rainbow-button/CHANGELOG.md)
 
-If at any stage you’re unsure of the formatting, you can [reference past RainbowKit releases.](https://github.com/rainbow-me/rainbowkit/releases)
+If at any stage you’re unsure of the formatting, you can [reference past RainbowKit releases.](https://github.com/merkletrade/rainbowkit/releases)
 
 That’s it — you’re all done! 🎉

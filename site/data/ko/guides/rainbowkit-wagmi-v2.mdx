@@ -13,7 +13,7 @@ image: guide-rainbowkit-v2.png
 **1. RainbowKit, `wagmi`, 및 `viem`을 최신 버전으로 업그레이드하세요**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. `@tanstack/react-query` 피어 의존성 설치하기**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. RainbowKit 및 Wagmi 구성 업그레이드**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ const config = getDefaultConfig({
 Wagmi v2에 맞게 `Chain` 유형이 변경되었으며 RainbowKit의 `iconUrl` 및 `iconBackground` 메타데이터를 계속 지원합니다.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 `createConfig` 사용 예시:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ RainbowKit 지갑 커넥터는 Wagmi v2를 지원하기 위해 상당한 변경�
 
 지갑 커넥터는 이제 `rdns` prop을 사용하여 EIP-6963 표준도 지원합니다. 지갑 목록에서 EIP-6963을 지원하는 지갑에 대한 중복 참조를 방지하기 위해 이를 채워 넣는 것이 중요합니다.
 
-> RainbowKit v2에 대한 문제점이나 피드백은 GitHub [여기](https://github.com/rainbow-me/rainbowkit/issues/new/choose)에 보고해 주세요.
+> RainbowKit v2에 대한 문제점이나 피드백은 GitHub [여기](https://github.com/merkletrade/rainbowkit/issues/new/choose)에 보고해 주세요.

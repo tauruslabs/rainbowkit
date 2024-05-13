@@ -17,10 +17,10 @@ Jika Anda belum, pertama atur proyek [Next.js](https://nextjs.org) Anda dengan [
 
 #### Instal
 
-Instal paket `@rainbow-me/rainbowkit-siwe-next-auth` dan dependensi peer-nya, [ethers](https://docs.ethers.org/v5/).
+Instal paket `@merkletrade/rainbowkit-siwe-next-auth` dan dependensi peer-nya, [ethers](https://docs.ethers.org/v5/).
 
 ```bash
-npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
+npm install @merkletrade/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 ```
 
 > Catatan: `siwe` memerlukan dependensi peer [ethers](https://docs.ethers.org/v5/), sementara [wagmi](https://wagmi.sh/) sekarang bergantung pada alternatif [viem](https://viem.sh).
@@ -30,14 +30,14 @@ npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 Dalam komponen `App` Anda, import `RainbowKitSiweNextAuthProvider`.
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
 ```
 
 Bungkus `RainbowKitProvider` dengan `RainbowKitSiweNextAuthProvider`, pastikan itu bersarang di dalam `SessionProvider` NextAuth sehingga memiliki akses ke sesi.
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 import { SessionProvider } from 'next-auth/react';
 import type { Session } from 'next-auth';
 import { AppProps } from 'next/app';
@@ -83,7 +83,7 @@ Fungsi ini akan dipanggil setiap kali pesan baru dibuat. Opsi yang dikembalikan 
 import {
   RainbowKitSiweNextAuthProvider,
   GetSiweMessageOptions,
-} from '@rainbow-me/rainbowkit-siwe-next-auth';
+} from '@merkletrade/rainbowkit-siwe-next-auth';
 
 const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   statement: 'Sign in to my RainbowKit app',

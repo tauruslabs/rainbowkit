@@ -1,4 +1,4 @@
-# @rainbow-me/rainbow-button
+# @merkletrade/rainbow-button
 
 ## 0.2.7
 
@@ -6,7 +6,7 @@
 
 - Updated dependencies [af4ea4e]
 - Updated dependencies [f0b3b25]
-  - @rainbow-me/rainbowkit@2.0.7
+  - @merkletrade/rainbowkit@2.0.7
 
 ## 0.2.6
 
@@ -14,7 +14,7 @@
 
 - Updated dependencies [7ab6e50]
 - Updated dependencies [515498f]
-  - @rainbow-me/rainbowkit@2.0.6
+  - @merkletrade/rainbowkit@2.0.6
 
 ## 0.2.5
 
@@ -26,7 +26,7 @@
 - Updated dependencies [b11118f]
 - Updated dependencies [4dd1e45]
 - Updated dependencies [ec41346]
-  - @rainbow-me/rainbowkit@2.0.5
+  - @merkletrade/rainbowkit@2.0.5
 
 ## 0.2.4
 
@@ -36,7 +36,7 @@
 - Updated dependencies [6c240ba]
 - Updated dependencies [34419b5]
 - Updated dependencies [5c60239]
-  - @rainbow-me/rainbowkit@2.0.4
+  - @merkletrade/rainbowkit@2.0.4
 
 ## 0.2.3
 
@@ -45,7 +45,7 @@
 - Updated dependencies [b80e8fa]
 - Updated dependencies [985b80b]
 - Updated dependencies [b25db9a]
-  - @rainbow-me/rainbowkit@2.0.3
+  - @merkletrade/rainbowkit@2.0.3
 
 ## 0.2.2
 
@@ -55,7 +55,7 @@
 - Updated dependencies [2f637e4]
 - Updated dependencies [c021746]
 - Updated dependencies [df572f1]
-  - @rainbow-me/rainbowkit@2.0.2
+  - @merkletrade/rainbowkit@2.0.2
 
 ## 0.2.1
 
@@ -68,7 +68,7 @@
 - Updated dependencies [f69c0e1]
 - Updated dependencies [bb56562]
 - Updated dependencies [1a08977]
-  - @rainbow-me/rainbowkit@2.0.1
+  - @merkletrade/rainbowkit@2.0.1
 
 ## 0.2.0
 
@@ -83,7 +83,7 @@
   **1. Upgrade Rainbow Button, `wagmi`, and `viem` to their latest versions\*\***
 
   ```bash
-  npm i @rainbow-me/rainbow-button@2 wagmi@2 viem@2.x
+  npm i @merkletrade/rainbow-button@2 wagmi@2 viem@2.x
   ```
 
   **2. Install `@tanstack/react-query` peer dependency**
@@ -101,8 +101,8 @@
   `RainbowConnector` is now `rainbowConnector`, and requires `appName` and no longer accepts the `chains` parameter.
 
   ```diff
-  - import { RainbowConnector } from '@rainbow-me/rainbow-button'
-  + import { rainbowConnector } from '@rainbow-me/rainbow-button'
+  - import { RainbowConnector } from '@merkletrade/rainbow-button'
+  + import { rainbowConnector } from '@merkletrade/rainbow-button'
     import { createConfig } from 'wagmi'
 
     const config = createConfig({
@@ -128,21 +128,21 @@
 ### Patch Changes
 
 - Updated dependencies [aa0269e]
-  - @rainbow-me/rainbowkit@2.0.0
+  - @merkletrade/rainbowkit@2.0.0
 
 ## 0.1.6
 
 ### Patch Changes
 
 - Updated dependencies [33a8266]
-  - @rainbow-me/rainbowkit@1.3.6
+  - @merkletrade/rainbowkit@1.3.6
 
 ## 0.1.5
 
 ### Patch Changes
 
 - Updated dependencies [2b0c7b3]
-  - @rainbow-me/rainbowkit@1.3.5
+  - @merkletrade/rainbowkit@1.3.5
 
 ## 0.1.4
 
@@ -154,7 +154,7 @@
 - Updated dependencies [e5f5f03]
 - Updated dependencies [c0bd68e]
 - Updated dependencies [a79609b]
-  - @rainbow-me/rainbowkit@1.3.4
+  - @merkletrade/rainbowkit@1.3.4
 
 ## 0.1.3
 
@@ -163,14 +163,14 @@
 - Updated dependencies [24b5a88]
 - Updated dependencies [7565fb2]
 - Updated dependencies [5a184e9]
-  - @rainbow-me/rainbowkit@1.3.3
+  - @merkletrade/rainbowkit@1.3.3
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies [7ba94f48]
-  - @rainbow-me/rainbowkit@1.3.2
+  - @merkletrade/rainbowkit@1.3.2
 
 ## 0.1.1
 
@@ -179,7 +179,7 @@
 - Updated dependencies [3feab0e6]
 - Updated dependencies [c9a8e469]
 - Updated dependencies [dba51779]
-  - @rainbow-me/rainbowkit@1.3.1
+  - @merkletrade/rainbowkit@1.3.1
 
 ## 0.1.0
 
@@ -187,12 +187,12 @@
 
 - 9ce75a65: The `RainbowButton` component is the simplest way to add support for Rainbow Wallet to dApps that use `wagmi` and prefer a more custom connector experience over [RainbowKit](https://www.rainbowkit.com/docs/installation).
 
-  **1. Install `@rainbow-me/rainbow-button` and its peer dependencies**
+  **1. Install `@merkletrade/rainbow-button` and its peer dependencies**
 
   The package is compatible with Next.js, React, and Vite. Ensure that you follow peer dependency warnings.
 
   ```bash
-  npm install @rainbow-me/rainbow-button wagmi viem
+  npm install @merkletrade/rainbow-button wagmi viem
   ```
 
   **2. Configure with Wagmi and install the RainbowButton**
@@ -200,11 +200,11 @@
   Pass an instance of the `RainbowConnector` to your Wagmi connector list, and wrap your app in the `RainbowButtonProvider`. Then drop-in the `RainbowButton` component into your wallet list.
 
   ```tsx
-  import "@rainbow-me/rainbow-button/styles.css";
+  import "@merkletrade/rainbow-button/styles.css";
   import {
     RainbowButtonProvider,
     RainbowConnector,
-  } from "@rainbow-me/rainbow-button";
+  } from "@merkletrade/rainbow-button";
 
   const config = createConfig({
     connectors: [new RainbowConnector({ chains, projectId })],
@@ -247,7 +247,7 @@
 ### Patch Changes
 
 - Updated dependencies [9ce75a65]
-  - @rainbow-me/rainbowkit@1.3.0
+  - @merkletrade/rainbowkit@1.3.0
 
 ## 0.0.1
 

@@ -14,7 +14,7 @@ description: Özel bir tema oluşturma
 Dahili temalar belli bir düzeyde özelleştirmeye olanak sağlarken, `Theme` türü altında yatan tema değişkenlerine daha düşük seviyeli erişimle kendi özel temalarınızı tanımlamanıza yardımcı olur.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 Sonra, dahili temayı, geçersiz kılmak istediğiniz tema belirteçleriyle birleştirin. Bu örnekte, markamın vurgu rengiyle eşleşmesi için `accentColor` jetonunu geçersiz kılıyorum.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

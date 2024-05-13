@@ -14,7 +14,7 @@ description: カスタムテーマの作成
 組み込みテーマがある程度のカスタマイズを提供する一方で、`Theme`タイプは、基盤となるテーマ変数へのローレベルなアクセスを通じて独自のカスタムテーマを定義する手助けをします。
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 組み込みテーマと、上書きしたいテーマトークンをマージします。 この例では、ブランドのアクセントカラーに合わせて`accentColor`トークンを上書きしています。
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

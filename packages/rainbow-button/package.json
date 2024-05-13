@@ -1,5 +1,5 @@
 {
-  "name": "@rainbow-me/rainbow-button",
+  "name": "@merkletrade/rainbow-button",
   "description": "Rainbow connector button",
   "version": "0.2.7",
   "files": [
@@ -34,7 +34,7 @@
     "typegen:watch": "tsc --emitDeclarationOnly --watch"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*"
+    "@merkletrade/rainbowkit": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainbow-me/rainbowkit.git",
+    "url": "git+https://github.com/merkletrade/rainbowkit.git",
     "directory": "packages/rainbow-button"
   }
 }

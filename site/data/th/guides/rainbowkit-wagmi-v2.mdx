@@ -13,7 +13,7 @@ image: guide-rainbowkit-v2.png
 **1. อัปเกรด RainbowKit, `wagmi`, และ `viem` ไปยังเวอร์ชันล่าสุด**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. ติดตั้งไลบรารี `@tanstack/react-query` ที่เป็น peer dependency**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 \*\*3. อัพเกรดการตั้งค่า RainbowKit และ Wagmi ของคุณ
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ const config = getDefaultConfig({
 ประเภทของ `Chain` ได้เปลี่ยนแปลงตาม Wagmi v2 และยังคงสนับสนุน metadata `iconUrl` และ `iconBackground` ของ RainbowKit
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 ตัวอย่างโดยใช้ `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ const config = getDefaultConfig({
 
 คอนเนคเตอร์กระเป๋าเงินยังรองรับมาตรฐาน EIP-6963 ด้วย prop `rdns`. ตรวจสอบให้แน่ใจว่ามีการกรอกข้อมูลนี้เพื่อป้องกันการอ้างอิงซ้ำๆ ไปยังกระเป๋าเงินที่รองรับ EIP-6963 ในรายการกระเป๋าเงินของคุณ.
 
-> กรุณาแจ้งปัญหาหรือข้อเสนอแนะสำหรับ RainbowKit v2 บน GitHub [ที่นี่](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> กรุณาแจ้งปัญหาหรือข้อเสนอแนะสำหรับ RainbowKit v2 บน GitHub [ที่นี่](https://github.com/merkletrade/rainbowkit/issues/new/choose).

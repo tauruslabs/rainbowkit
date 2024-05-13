@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
+    "@merkletrade/rainbowkit": "workspace:*",
     "buffer": "^6.0.3",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",

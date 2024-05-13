@@ -14,7 +14,7 @@ description: 通过内置翻译自定义您的 dApp 语言
 要为您的用户指定一种语言，只需在您的 `RainbowKitProvider`中添加 `locale="zh-CN"` 作为一个 prop
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider locale="zh-CN" {...etc}>
@@ -42,7 +42,7 @@ RainbowKit 的本地化支持与 [Sub-path Routing](https://nextjs.org/docs/page
 然后将页面路由器提供的`locale`传递到`RainbowKitProvider`
 
 ```tsx
-import { RainbowKitProvider, Locale } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Locale } from '@merkletrade/rainbowkit';
 
 export const App = () => {
   const { locale } = useRouter() as { locale: Locale };
@@ -54,9 +54,9 @@ export const App = () => {
 };
 ```
 
-您可以在[这里](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next)参考页面路由器的示例。
+您可以在[这里](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next)参考页面路由器的示例。
 
-应用路由器尚未支持i18n。应用路由器尚未支持i18n。在[这里](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next-app-i18n)参考我们以[`next-intl`](https://github.com/amannn/next-intl)为中间件的最佳实践。
+应用路由器尚未支持i18n。应用路由器尚未支持i18n。在[这里](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next-app-i18n)参考我们以[`next-intl`](https://github.com/amannn/next-intl)为中间件的最佳实践。
 
 建议使用相同的技术翻译您的dApp的内容，以便全面支持本地化。  像[`i18n-js`](https://github.com/fnando/i18n)和[`next-intl`](https://github.com/amannn/next-intl)这样的本地化库以及像 Crowdin 这样的管理工具将简化此过程。
 
@@ -88,4 +88,4 @@ export const App = () => {
   ]}
 />
 
-如果您希望看到对额外语言的支持，请打开一个 [GitHub Discussion](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas)，我们将尽快进行支持。
+如果您希望看到对额外语言的支持，请打开一个 [GitHub Discussion](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas)，我们将尽快进行支持。

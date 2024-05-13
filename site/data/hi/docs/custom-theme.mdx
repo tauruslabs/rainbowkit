@@ -14,7 +14,7 @@ description: एक अनुकूलित थीम बनाना
 जबकि बिल्ट-इन थीम्स कुछ स्तर की अनुकूलन को प्रदान करती हैं, `Theme` प्रकार आपको अपनी custom themes को परिभाषित करने के लिए मदद करता है जिसमें थीम वेरिएबल्स के निचले-स्तर का दस्त्रेस होता है।
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 फिर, बिल्ट-इन थीम को मर्ज करें, थीम टोकन्स के साथ जिन्हें आप ओवरराइड करना चाहते हैं। इस उदाहरण में, मैं `accentColor` टोकन को ओवरराइड कर रहा हूँ, ताकि ये मेरे ब्रांड के accent रंग से मिलान करे।
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

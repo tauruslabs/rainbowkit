@@ -1,15 +1,15 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
 import { createConfig, http, WagmiProvider } from 'wagmi';
 import {
   connectorsForWallets,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { coinbaseWallet, walletConnect } from 'wagmi/connectors';
 import { mainnet } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { metaMaskWallet, rainbowWallet } from '@rainbow-me/rainbowkit/wallets';
+import { metaMaskWallet, rainbowWallet } from '@merkletrade/rainbowkit/wallets';
 
 const projectId = 'YOUR_PROJECT_ID';
 

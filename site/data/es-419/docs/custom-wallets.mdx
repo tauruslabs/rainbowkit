@@ -7,7 +7,7 @@ description: Crear una billetera personalizada
 
 ## Crear una billetera personalizada
 
-> Nota: Esta API es inestable y es probable que cambie en un futuro cercano. Agregaremos más billeteras incorporadas con el tiempo. [Háganos saber](https://github.com/rainbow-me/rainbowkit/issues) si hay alguna billetera particular que le interese.
+> Nota: Esta API es inestable y es probable que cambie en un futuro cercano. Agregaremos más billeteras incorporadas con el tiempo. [Háganos saber](https://github.com/merkletrade/rainbowkit/issues) si hay alguna billetera particular que le interese.
 
 El tipo de función `Wallet` se proporciona para ayudarlo a definir sus propias billeteras personalizadas. Las siguientes propiedades se pueden configurar en el valor de retorno de su función `Wallet`:
 
@@ -209,7 +209,7 @@ El tipo de función `Wallet` se proporciona para ayudarlo a definir sus propias 
 Por ejemplo, para crear una billetera personalizada utilizando WalletConnect:
 
 ```tsx
-import { Wallet, getWalletConnectConnector } from '@rainbow-me/rainbowkit';
+import { Wallet, getWalletConnectConnector } from '@merkletrade/rainbowkit';
 
 export interface MyWalletOptions {
   projectId: string;

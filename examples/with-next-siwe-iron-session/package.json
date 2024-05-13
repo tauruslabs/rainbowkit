@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
+    "@merkletrade/rainbowkit": "workspace:*",
     "ethers": "^5.6.8",
     "iron-session": "^6.3.1",
     "next": "^14.2.3",

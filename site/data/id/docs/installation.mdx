@@ -12,11 +12,11 @@ description: Mulai dan jalankan dengan RainbowKit
 Anda dapat membuat kerangka baru RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) app dengan salah satu dari perintah berikut, menggunakan manager paket pilihan Anda:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 Ini akan meminta Anda untuk nama proyek, menghasilkan direktori baru berisi proyek template, dan menginstal semua dependensi yang dibutuhkan.
@@ -28,7 +28,7 @@ Alternatifnya, Anda dapat mengintegrasikan RainbowKit secara manual ke dalam pro
 Instal RainbowKit dan dependensi sejawatnya, [wagmi](https://wagmi.sh/), [viem](https://viem.sh), dan [@tanstack/react-query](https://tanstack.com/query/v5).
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > Catatan: RainbowKit adalah pustaka [React](https://reactjs.org/).
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 Impor RainbowKit, Wagmi dan TanStack Query.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ Konfigurasikan rantai yang diinginkan dan hasilkan konektor yang diperlukan. And
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 Kemudian, dalam aplikasi Anda, impor dan render komponen `ConnectButton`.
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ Paket bundel [Webpack v5](https://webpack.js.org/blog/2020-10-10-webpack-5-relea
 
 Dalam versi sebelumnya dari RainbowKit yang bergantung pada [ethers](https://docs.ethers.org/v5/), modul `fs`, `net`, dan `tls` secara otomatis dilakukan polyfill. Hal ini tidak lagi berlaku dengan RainbowKit v1 + wagmi v1, yang dibangun di atas [viem](https://viem.sh/).
 
-Merujuk pada [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js), dan [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) sampel untuk petunjuk konfigurasi proyek Anda.
+Merujuk pada [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js), dan [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) sampel untuk petunjuk konfigurasi proyek Anda.
 
 ##### Vite
 
-Paket bundel [Vite](https://vitejs.dev) tidak menyediakan polyfill Node, sehingga Anda perlu menyertakan polyfill untuk `global`, `Buffer` dan `process.env`. Sebagai contoh, Anda dapat merujuk pada [polyfill di proyek sampel Vite kami](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
+Paket bundel [Vite](https://vitejs.dev) tidak menyediakan polyfill Node, sehingga Anda perlu menyertakan polyfill untuk `global`, `Buffer` dan `process.env`. Sebagai contoh, Anda dapat merujuk pada [polyfill di proyek sampel Vite kami](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
 
 ##### Remix
 
 Ketika menggunakan [Remix](https://remix.run), semua titik masuk paket RainbowKit harus ditambahkan ke daftar [server dependencies](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) Anda di konfigurasi Remix Anda karena mereka dipublikasikan sebagai paket ESM.
 
-Remix juga memerlukan Anda untuk melakukan polyfill `global`, `Buffer` dan `process.env`. Rujuk [polyfill di proyek sampel Remix kami](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
+Remix juga memerlukan Anda untuk melakukan polyfill `global`, `Buffer` dan `process.env`. Rujuk [polyfill di proyek sampel Remix kami](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
 
 ```js
 /**
@@ -139,8 +139,8 @@ Remix juga memerlukan Anda untuk melakukan polyfill `global`, `Buffer` dan `proc
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ Untuk detail lebih lanjut, lihat [dokumentasi wagmi.](https://wagmi.sh)
 
 ### Contoh lebih lanjut
 
-Untuk melihat beberapa contoh berjalan dari RainbowKit, atau bahkan menggunakannya untuk secara otomatis mencangkul proyek baru, periksa [contoh resmi](https://github.com/rainbow-me/rainbowkit/tree/main/examples).
+Untuk melihat beberapa contoh berjalan dari RainbowKit, atau bahkan menggunakannya untuk secara otomatis mencangkul proyek baru, periksa [contoh resmi](https://github.com/merkletrade/rainbowkit/tree/main/examples).
 
 Untuk mencoba RainbowKit langsung di peramban Anda, periksa tautan CodeSandbox di bawah:
 
-- dengan [Membuat Aplikasi React](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- dengan [Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- dengan [Next.js Aplikasi Router](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- dengan [Remix](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- dengan [Vite](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- dengan [Membuat Aplikasi React](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- dengan [Next.js](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- dengan [Next.js Aplikasi Router](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- dengan [Remix](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- dengan [Vite](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)

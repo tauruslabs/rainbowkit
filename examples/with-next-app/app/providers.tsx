@@ -5,12 +5,12 @@ import {
   RainbowKitProvider,
   getDefaultWallets,
   getDefaultConfig,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import {
   argentWallet,
   trustWallet,
   ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 import {
   arbitrum,
   base,

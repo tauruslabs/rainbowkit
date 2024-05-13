@@ -1,5 +1,5 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import type { Locale } from '@rainbow-me/rainbowkit';
+import type { Locale } from '@merkletrade/rainbowkit';
 import { Providers } from './providers';
 
 export function generateStaticParams() {

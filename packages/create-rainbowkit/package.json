@@ -1,5 +1,5 @@
 {
-  "name": "@rainbow-me/create-rainbowkit",
+  "name": "@merkletrade/create-rainbowkit",
   "description": "Scaffold a new RainbowKit project",
   "version": "0.3.3",
   "files": [

@@ -1,5 +1,5 @@
 {
-  "name": "@rainbow-me/rainbowkit",
+  "name": "@merkletrade/rainbowkit",
   "version": "2.0.7",
   "description": "The best way to connect a wallet",
   "files": [
@@ -74,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainbow-me/rainbowkit.git",
+    "url": "git+https://github.com/merkletrade/rainbowkit.git",
     "directory": "packages/rainbowkit"
   }
 }

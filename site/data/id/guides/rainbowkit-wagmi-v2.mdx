@@ -13,7 +13,7 @@ Ikuti langkah-langkah berikut untuk migrasi.
 **1. Tingkatkan RainbowKit, `wagmi`, dan `viem` ke versi terbaru**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. Instal peer dependency `@tanstack/react-query`**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. Tingkatkan konfigurasi RainbowKit dan Wagmi Anda**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ Anda tidak perlu lagi meneruskan `chains` ke `<RainbowKitProvider>`.
 Tipe `Chain` telah berubah sesuai dengan Wagmi v2, dan terus mendukung metadata `iconUrl` dan `iconBackground` dari RainbowKit.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 Contoh dengan `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ Konektor dompet RainbowKit telah mengalami perubahan besar untuk mendukung Wagmi
 
 Konektor dompet sekarang juga mendukung standar EIP-6963 dengan properti `rdns`. Pastikan ini diisi untuk mencegah referensi duplikat ke dompet yang mendukung EIP-6963 di daftar dompet Anda.
 
-> Silakan laporkan masalah atau umpan balik untuk RainbowKit v2 di GitHub [di sini](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> Silakan laporkan masalah atau umpan balik untuk RainbowKit v2 di GitHub [di sini](https://github.com/merkletrade/rainbowkit/issues/new/choose).

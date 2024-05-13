@@ -13,7 +13,7 @@ image: guide-rainbowkit-v2.png
 **1. قم بترقية RainbowKit، `wagmi`، و `viem` إلى أحدث إصداراتها**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 \*\*2. تثبيت تبعية النظير `@tanstack/react-query`
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. قم بترقية تكوينات RainbowKit و Wagmi الخاصة بك**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ const config = getDefaultConfig({
 تغير نوع `Chain` وفقًا لـ Wagmi v2، ويستمر في دعم بيانات `iconUrl` و `iconBackground` الوصفية لـ RainbowKit.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 مثال باستخدام `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ const config = getDefaultConfig({
 
 موصلات المحفظة الآن تدعم أيضًا المعيار EIP-6963 بخاصية `rdns`. تأكد من ملء هذه الخاصية لمنع الإشارات المكررة إلى محافظ تدعم EIP-6963 في قائمة محفظتك.
 
-> يرجى الإبلاغ عن أية مشاكل أو ملاحظات لـ RainbowKit الإصدار 2 على GitHub [هنا](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> يرجى الإبلاغ عن أية مشاكل أو ملاحظات لـ RainbowKit الإصدار 2 على GitHub [هنا](https://github.com/merkletrade/rainbowkit/issues/new/choose).

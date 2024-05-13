@@ -14,7 +14,7 @@ description: Membuat tema khusus
 Meskipun tema bawaan menyediakan beberapa tingkat penyesuaian, tipe `Theme` disediakan untuk membantu Anda mendefinisikan tema kustom Anda sendiri dengan akses tingkat rendah ke variabel tema yang mendasar.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 Lalu, gabungkan tema bawaan, dengan token tema yang ingin Anda timpa. Dalam contoh ini, saya menimpa token `accentColor` agar sesuai dengan warna aksen merek saya.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

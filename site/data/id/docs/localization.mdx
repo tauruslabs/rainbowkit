@@ -14,7 +14,7 @@ Jika tersedia, RainbowKit akan mendeteksi [bahasa yang disukai pengguna](https:/
 Untuk menentukan bahasa bagi pengguna Anda, cukup tambahkan `locale="zh-CN"` sebagai prop dalam `RainbowKitProvider` Anda
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider locale="zh-CN" {...etc}>
@@ -42,7 +42,7 @@ Konfigurasikan proyek Next.js Anda seperti contoh di bawah ini untuk menambahkan
 Lalu berikan `locale` yang disediakan oleh Pages Router ke `RainbowKitProvider`
 
 ```tsx
-import { RainbowKitProvider, Locale } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Locale } from '@merkletrade/rainbowkit';
 
 export const App = () => {
   const { locale } = useRouter() as { locale: Locale };
@@ -54,9 +54,9 @@ export const App = () => {
 };
 ```
 
-Anda dapat merujuk contoh untuk Pages Router [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next).
+Anda dapat merujuk contoh untuk Pages Router [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next).
 
-App Router belum mendukung i18n. Rujuk contoh kami yang terpisah [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next-app-i18n) untuk praktek terbaik implementasi dengan middleware [`next-intl`](https://github.com/amannn/next-intl).
+App Router belum mendukung i18n. Rujuk contoh kami yang terpisah [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next-app-i18n) untuk praktek terbaik implementasi dengan middleware [`next-intl`](https://github.com/amannn/next-intl).
 
 Disarankan agar Anda menggunakan teknik yang sama untuk menerjemahkan konten dApp Anda untuk dukungan lokalisasi penuh. Pustaka lokal seperti [`i18n-js`](https://github.com/fnando/i18n) dan [`next-intl`](https://github.com/amannn/next-intl) serta alat manajemen seperti Crowdin akan menyederhanakan proses ini.
 
@@ -89,4 +89,4 @@ Kami memberikan dukungan penuh untuk daerah `locale` berikut:
   ]}
 />
 
-Jika Anda ingin melihat dukungan untuk bahasa tambahan, silakan buka [Diskusi GitHub](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas) dan kami akan bekerja untuk mendukungnya secepat mungkin.
+Jika Anda ingin melihat dukungan untuk bahasa tambahan, silakan buka [Diskusi GitHub](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas) dan kami akan bekerja untuk mendukungnya secepat mungkin.

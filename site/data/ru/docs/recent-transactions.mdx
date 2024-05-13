@@ -14,7 +14,7 @@ description: Показать ваши недавние транзакции
 Чтобы использовать эту функцию, сначала включите опцию `showRecentTransactions` на `RainbowKitProvider`.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 Затем транзакции можно зарегистрировать в RainbowKit с помощью хука `useAddRecentTransaction`.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ export default () => {
 По умолчанию транзакция будет считаться завершенной, как только будет добыт один блок поверх блока, в котором была добыта транзакция, но это можно настроить, указав пользовательское значение `confirmations`.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

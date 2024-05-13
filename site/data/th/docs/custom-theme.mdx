@@ -14,7 +14,7 @@ description: การสร้างธีมที่กำหนดเอง
 ในขณะที่ธีมที่ติดตั้งมาแล้วให้ความสามารถในการปรับแต่งบางประการ, ประเภท 'Theme' จะช่วยให้คุณสามารถกำหนดธีมที่กำหนดเองโดยใช้สิทธิ์พิเศษในการเข้าถึงตัวแปรธีม.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 ทำการรวมธีมที่ติดตั้งมาแล้ว, กับโทเค็นธีมที่คุณต้องการเขียนทับ. ในตัวอย่างนี้, ฉันกำลังแทนที่โทเค็น `accentColor` เพื่อให้ตรงกับสีเน้นของแบรนด์ของฉัน
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

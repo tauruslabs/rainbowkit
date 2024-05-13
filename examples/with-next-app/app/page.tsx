@@ -1,4 +1,4 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 function Page() {
   return (

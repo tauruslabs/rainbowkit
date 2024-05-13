@@ -13,7 +13,7 @@ image: guide-rainbowkit-v2.png
 **1. RainbowKit, `wagmi`, और `viem` को उनके नवीनतम संस्करणों में अपग्रेड करें**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. `@tanstack/react-query` पीयर डिपेंडेंसी इंस्टॉल करें**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. अपने RainbowKit और Wagmi कॉन्फ़िगरेशन को अपग्रेड करें**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ const config = getDefaultConfig({
 Wagmi v2 के अनुसार `Chain` प्रकार में परिवर्तन हुआ है, और यह RainbowKit के `iconUrl` और `iconBackground` मेटाडेटा का समर्थन जारी रखता है।
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 `createConfig` के साथ उदाहरण:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ RainbowKit वॉलेट कनेक्टर्स में Wagmi v2 का
 
 वॉलेट कनेक्टर्स अब EIP-6963 मानक का भी समर्थन करते हैं `rdns` प्रॉप के साथ। अपनी वॉलेट सूची में EIP-6963 का समर्थन करने वाले वॉलेट्स के डुप्लिकेट संदर्भों से बचने के लिए यह सुनिश्चित करें कि यह पॉप्युलेटेड हो।
 
-> कृपया RainbowKit v2 के लिए कोई भी समस्याएं या प्रतिक्रिया GitHub पर [यहाँ](https://github.com/rainbow-me/rainbowkit/issues/new/choose) रिपोर्ट करें।
+> कृपया RainbowKit v2 के लिए कोई भी समस्याएं या प्रतिक्रिया GitHub पर [यहाँ](https://github.com/merkletrade/rainbowkit/issues/new/choose) रिपोर्ट करें।

@@ -14,7 +14,7 @@ Mevcutsa, RainbowKit kullanıcının [tercih edilen dilini](https://developer.mo
 Kullanıcılarınız için bir dil belirtmek için, sadece `RainbowKitProvider`'ınızda bir prop olarak `locale="zh-CN"` ekleyin
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider locale="zh-CN" {...etc}>
@@ -42,7 +42,7 @@ Aşağıdaki örnekte olduğu gibi Next.js projenizi yapılandırın ve rotalar�
 Sonra, Sayfalar Yönlendiricisi tarafından sağlanan `locale`'yi `RainbowKitProvider`'a geçirin
 
 ```tsx
-import { RainbowKitProvider, Locale } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Locale } from '@merkletrade/rainbowkit';
 
 export const App = () => {
   const { locale } = useRouter() as { locale: Locale };
@@ -54,9 +54,9 @@ export const App = () => {
 };
 ```
 
-Sayfalar Yönlendiricisi için bir örneği buradan [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next) referans alabilirsiniz.
+Sayfalar Yönlendiricisi için bir örneği buradan [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next) referans alabilirsiniz.
 
-Uygulama Yönlendiricisi henüz i18n'yi desteklemiyor. En iyi uygulama tekniklerini [`next-intl`](https://github.com/amannn/next-intl) ara yazılımı ile implemente etmek için ayrı örneğimize [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next-app-i18n) bakınız.
+Uygulama Yönlendiricisi henüz i18n'yi desteklemiyor. En iyi uygulama tekniklerini [`next-intl`](https://github.com/amannn/next-intl) ara yazılımı ile implemente etmek için ayrı örneğimize [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next-app-i18n) bakınız.
 
 DApp'inizin içeriğini tam lokalizasyon desteği için çevirmek için aynı teknikleri kullanmanız önerilir. [`i18n-js`](https://github.com/fnando/i18n) ve [`next-intl`](https://github.com/amannn/next-intl) gibi lokalizasyon kütüphaneleri ve Crowdin gibi yönetim araçları bu süreci basitleştirecektir.
 
@@ -89,4 +89,4 @@ Aşağıdaki `locale` bölgeleri için tam destek sağlarız:
   ]}
 />
 
-Eğer ek bir dil desteği görmek isterseniz, lütfen bir [GitHub Tartışması](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas) açın ve biz bunu en kısa sürede desteklemek için çalışacağız.
+Eğer ek bir dil desteği görmek isterseniz, lütfen bir [GitHub Tartışması](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas) açın ve biz bunu en kısa sürede desteklemek için çalışacağız.

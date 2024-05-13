@@ -12,11 +12,11 @@ description: เริ่มต้นและทำงานได้ด้ว�
 คุณสามารถสร้างแอป RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) ใหม่ด้วยคำสั่งที่ต้องการ โดยใช้โปรแกรมจัดการแพคเกจที่คุณเลือก:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 การดำเนินการนี้จะถามคุณว่าต้องการชื่อโครงการอะไร สร้างไดเรกทอรีใหม่ที่มีโครงการโครงสร้างพื้นฐานและติดตั้งทุกความต้องการที่พวกคุณต้องการ.
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 ติดตั้ง RainbowKit และ peer dependencies ที่เกี่ยวข้อง, [wagmi](https://wagmi.sh/), [viem](https://viem.sh), และ [@tanstack/react-query](https://tanstack.com/query/v5).
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > หมายเหตุ: RainbowKit เป็นคลังภาพ [React](https://reactjs.org/)
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 นำเข้า RainbowKit, Wagmi และ TanStack Query.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 จากนั้นในแอพของคุณ นำเข้าและแสดงคอมโพเน้นต์ `ConnectButton`
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ RainbowKit จะดูแลเลือกกระเป๋าเงินข
 
 ในเวอร์ชันก่อนหน้านี้ของ RainbowKit ที่พึ่งพาบน [ethers](https://docs.ethers.org/v5/), โมดูล `fs`, `net`, และ `tls` ถูก polyfilled โดยอัตโนมัติ. นี้ไม่ใช่กรณีอีกต่อไปด้วย RainbowKit v1 + wagmi v1, ซึ่งสร้างบน [viem](https://viem.sh/).
 
-อ้างอิง [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js), และ [สร้างตัวอย่าง polyfills ของ React App](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) สำหรับคำแนะนำการกำหนดค่าสำหรับโปรเจคของคุณ.
+อ้างอิง [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js), และ [สร้างตัวอย่าง polyfills ของ React App](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) สำหรับคำแนะนำการกำหนดค่าสำหรับโปรเจคของคุณ.
 
 ##### Vite
 
-bundler [Vite](https://vitejs.dev) ไม่ได้ให้ Node polyfills, ดังนั้นคุณจำเป็นต้องรวม polyfills สำหรับ `global`, `Buffer` และ `process.env`. เป็นตัวอย่าง, คุณสามารถอ้างอิง [polyfills ในตัวอย่างโปรเจค Vite ของเรา](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
+bundler [Vite](https://vitejs.dev) ไม่ได้ให้ Node polyfills, ดังนั้นคุณจำเป็นต้องรวม polyfills สำหรับ `global`, `Buffer` และ `process.env`. เป็นตัวอย่าง, คุณสามารถอ้างอิง [polyfills ในตัวอย่างโปรเจค Vite ของเรา](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
 
 ##### Remix
 
 เมื่อใช้ [Remix](https://remix.run), จุดเริ่มต้นของแพคเกจ RainbowKit ทั้งหมดจะต้องถูกเพิ่มเข้าไปในรายการ[ขึ้นขึ้นของเซิร์ฟเวอร์](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) ใน Remix config ของคุณเนื่องจากพวกเขาเผยแพร่เป็นแพคเกจ ESM
 
-Remix ยังต้องการให้คุณ polyfill `global`, `Buffer` และ `process.env`. อ้างอิง [polyfills ในโปรเจ็กต์ Remix ตัวอย่างของเรา](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
+Remix ยังต้องการให้คุณ polyfill `global`, `Buffer` และ `process.env`. อ้างอิง [polyfills ในโปรเจ็กต์ Remix ตัวอย่างของเรา](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
 
 ```js
 /**
@@ -139,8 +139,8 @@ Remix ยังต้องการให้คุณ polyfill `global`, `Buffe
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ module.exports = {
 
 ### ตัวอย่างเพิ่มเติม
 
-เพื่อดูตัวอย่างการทำงานของ RainbowKit หรือใช้พวกเขาเพื่อสร้างโครงงานใหม่โดยอัตโนมัติ ดูที่ [ตัวอย่างการทำงานของทางการ](https://github.com/rainbow-me/rainbowkit/tree/main/examples).
+เพื่อดูตัวอย่างการทำงานของ RainbowKit หรือใช้พวกเขาเพื่อสร้างโครงงานใหม่โดยอัตโนมัติ ดูที่ [ตัวอย่างการทำงานของทางการ](https://github.com/merkletrade/rainbowkit/tree/main/examples).
 
 เพื่อทดลอง RainbowKit โดยตรงในเบราว์เซอร์ของคุณ ดูลิงก์ CodeSandbox ที่ด้านล่าง:
 
-- ร่วมกับ [Create React App](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- ร่วมกับ [Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- ร่วมกับ [Next.js App Router](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- ร่วมกับ [Remix](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- ร่วมกับ [Vite](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- ร่วมกับ [Create React App](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- ร่วมกับ [Next.js](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- ร่วมกับ [Next.js App Router](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- ร่วมกับ [Remix](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- ร่วมกับ [Vite](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)

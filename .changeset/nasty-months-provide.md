@@ -1,11 +1,11 @@
 ---
-"@rainbow-me/rainbowkit": patch
+"@merkletrade/rainbowkit": patch
 ---
 
 Added real-time balance fetching based on the [Recent Transaction](https://www.rainbowkit.com/docs/recent-transactions) API. As a transaction is confirmed on-chain, the user's gas balance will be updated to reflect the transaction.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

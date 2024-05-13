@@ -17,10 +17,10 @@ Si aún no lo has hecho, primero configura tu proyecto [Next.js](https://nextjs.
 
 #### Instalar
 
-Instale el paquete `@rainbow-me/rainbowkit-siwe-next-auth` y su dependencia de igual nivel, [ethers](https://docs.ethers.org/v5/).
+Instale el paquete `@merkletrade/rainbowkit-siwe-next-auth` y su dependencia de igual nivel, [ethers](https://docs.ethers.org/v5/).
 
 ```bash
-npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
+npm install @merkletrade/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 ```
 
 > Nota: `siwe` requiere la dependencia de igual nivel [ethers](https://docs.ethers.org/v5/), mientras que [wagmi](https://wagmi.sh/) ahora se basa en la alternativa [viem](https://viem.sh).
@@ -30,14 +30,14 @@ npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 En su componente `App`, importe `RainbowKitSiweNextAuthProvider`.
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
 ```
 
 Envuelva `RainbowKitProvider` con `RainbowKitSiweNextAuthProvider`, asegurándose de que esté anidado dentro del `SessionProvider` de NextAuth para que tenga acceso a la sesión.
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 import { SessionProvider } from 'next-auth/react';
 import type { Session } from 'next-auth';
 import { AppProps } from 'next/app';
@@ -83,7 +83,7 @@ Esta función será llamada siempre que se cree un nuevo mensaje. Las opciones d
 import {
   RainbowKitSiweNextAuthProvider,
   GetSiweMessageOptions,
-} from '@rainbow-me/rainbowkit-siwe-next-auth';
+} from '@merkletrade/rainbowkit-siwe-next-auth';
 
 const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   statement: 'Sign in to my RainbowKit app',

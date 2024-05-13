@@ -15,7 +15,7 @@ title: マイグレーションガイド
 **1. RainbowKit、`wagmi`、および`viem`を最新バージョンにアップグレードしてください**
 
 ```bash
-npm i @rainbow-me/rainbowkit@2 wagmi@2 viem@2.x
+npm i @merkletrade/rainbowkit@2 wagmi@2 viem@2.x
 ```
 
 **2. `@tanstack/react-query`のピア依存をインストール**
@@ -31,7 +31,7 @@ npm i @tanstack/react-query
 **3. RainbowKit と Wagmi の設定をアップグレードしてください**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -39,9 +39,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -138,7 +138,7 @@ const config = getDefaultConfig({
 Wagmi v2に従って`Chain`タイプが変更され、RainbowKitの`iconUrl`と`iconBackground`メタデータをサポートし続けています。
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -179,7 +179,7 @@ const config = getDefaultConfig({
 `createConfig`を使用した例:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -212,7 +212,7 @@ RainbowKitのウォレットコネクタは、Wagmi v2をサポートするた�
 **1. RainbowKitと`wagmi`を最新バージョンにアップグレード**
 
 ```bash
-npm i @rainbow-me/rainbowkit@^1 wagmi@^1
+npm i @merkletrade/rainbowkit@^1 wagmi@^1
 ```
 
 **2. `viem`ピア依存関係をインストール**
@@ -229,7 +229,7 @@ npm i viem
 
 以前のwagmiバージョンでは、 [ethers](https://docs.ethers.org/v5/)に依存していたため、WalletConnectが必要とする`fs`、`net`、`tls`モジュールが自動的にポリフィルされました。 これは、[viem](https://viem.sh/)をベースに構築されたRainbowKit v1 + wagmi v1ではもはや当てはまりません。
 
-プロジェクトの設定指南として[Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js)と[Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts)のサンプルを参照してください。
+プロジェクトの設定指南として[Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js)と[Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts)のサンプルを参照してください。
 
 ViteとRemixの追加フレームワークガイドは、 [here](https://www.rainbowkit.com/docs/installation#additional-build-tooling-setup)で利用できます。
 
@@ -254,7 +254,7 @@ RainbowKitは、継続的なWalletConnect v1のサポートのために、`wagmi
 #### 1. RainbowKitと`wagmi`を最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.12.0 wagmi@^0.12.0
+npm i @merkletrade/rainbowkit@^0.12.0 wagmi@^0.12.0
 ```
 
 #### 2. WalletConnect CloudのprojectIdを提供します
@@ -294,7 +294,7 @@ wagmiのピア依存関係が`0.11.x`に更新されました。
 #### 1. RainbowKitと`wagmi`を最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.11.0 wagmi@^0.11.0
+npm i @merkletrade/rainbowkit@^0.11.0 wagmi@^0.11.0
 ```
 
 #### 2. `wagmi`の破壊的な変更をチェックします
@@ -312,7 +312,7 @@ wagmiのピア依存関係が`0.10.x`に更新されました。
 #### 1. RainbowKitと`wagmi`を最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.10.0 wagmi@^0.10.0
+npm i @merkletrade/rainbowkit@^0.10.0 wagmi@^0.10.0
 ```
 
 #### 2. `wagmi`の破壊的な変更をチェックします
@@ -330,7 +330,7 @@ wagmiのピア依存関係が `0.9.x` に更新されました。
 #### 1. RainbowKitと`wagmi`を最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.9.0 wagmi@^0.9.0
+npm i @merkletrade/rainbowkit@^0.9.0 wagmi@^0.9.0
 ```
 
 #### 2. `wagmi`の破壊的な変更をチェックします
@@ -348,7 +348,7 @@ wagmiのピア依存関係が `0.8.x` に更新されました。
 #### 1. RainbowKitと`wagmi`を最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.8.0 wagmi@^0.8.0
+npm i @merkletrade/rainbowkit@^0.8.0 wagmi@^0.8.0
 ```
 
 #### 2. `wagmi`の破壊的な変更をチェックします
@@ -362,15 +362,15 @@ npm i @rainbow-me/rainbowkit@^0.8.0 wagmi@^0.8.0
 カスタムウォレットリストを作成している場合、バンドルサイズを削減するために、各ウォレットを個別にインポートする必要があります。 ウォレットがもはや `wallet` オブジェクトを通じて名前空間化されないため、すべてのウォレットには `Wallet` という接尾辞が付きます。 ウォレットがもはや `wallet` オブジェクトを通じて名前空間化されないため、すべてのウォレットには `Wallet` という接尾辞が付きます。 ウォレットがもはや `wallet` オブジェクトを通じて名前空間化されないため、すべてのウォレットには `Wallet` という接尾辞が付きます。
 
 ```diff
--import { connectorsForWallets, wallet } from '@rainbow-me/rainbowkit';
-+import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+-import { connectorsForWallets, wallet } from '@merkletrade/rainbowkit';
++import { connectorsForWallets } from '@merkletrade/rainbowkit';
 +import {
 +  injectedWallet,
 +  rainbowWallet,
 +  metaMaskWallet,
 +  coinbaseWallet,
 +  walletConnectWallet,
-+} from '@rainbow-me/rainbowkit/wallets';
++} from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.injected({ chains }),
@@ -389,8 +389,8 @@ const wallets = [
 また、Steakwalletの下位互換性レイヤーが削除されたことに注意してください。 代わりにOmniを使用すべきです。
 
 ```diff
--import { wallet } from '@rainbow-me/rainbowkit';
-+import { omniWallet } from '@rainbow-me/rainbowkit/wallets';
+-import { wallet } from '@merkletrade/rainbowkit';
++import { omniWallet } from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.steak({ chains }),
@@ -409,7 +409,7 @@ RainbowKitは`wagmi`のピア依存関係を`0.5.x`に更新しました。
 RainbowKitとwagmiを最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.4.0 wagmi@^0.5.0
+npm i @merkletrade/rainbowkit@^0.4.0 wagmi@^0.5.0
 ```
 
 #### 2. `wagmi`の破壊的な変更をチェックします
@@ -427,7 +427,7 @@ npm i @rainbow-me/rainbowkit@^0.4.0 wagmi@^0.5.0
 `createConnector`の`chainId`から以前にRPCのURLを導出していた場合、`wagmi`が`configureChains`と一緒に使用されるときに内部的にRPCのURLを処理するようになったので、そのロジックを削除できます。
 
 ```diff
-import { connectorsForWallets, wallet, Chain, Wallet } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, wallet, Chain, Wallet } from '@merkletrade/rainbowkit';
 import { chain, configureChains } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -489,7 +489,7 @@ RainbowKitは`wagmi`のピア依存性を`^0.4`に更新しました。
 RainbowKitとwagmiを最新バージョンにアップグレードします
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
+npm i @merkletrade/rainbowkit@^0.2.0 wagmi@^0.4.2
 ```
 
 #### 2. configureChainsのインポートを置き換える
@@ -497,7 +497,7 @@ npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
 RainbowKitの代わりにwagmiから`configureChains`をインポートします：
 
 ```diff
-- import { configureChains } from '@rainbow-me/rainbowkit';
+- import { configureChains } from '@merkletrade/rainbowkit';
 + import { configureChains } from 'wagmi';
 ```
 
@@ -506,7 +506,7 @@ RainbowKitの代わりにwagmiから`configureChains`をインポートします
 RainbowKitはもはや`apiProvider` APIをエクスポートしない。 これをwagmiから任意のプロバイダーに置き換えてください。 これをwagmiから任意のプロバイダーに置き換えてください。 これをwagmiから任意のプロバイダーに置き換えてください。
 
 ```diff
-- import { apiProvider } from '@rainbow-me/rainbowkit';
+- import { apiProvider } from '@merkletrade/rainbowkit';
 ```
 
 #### アルケミー

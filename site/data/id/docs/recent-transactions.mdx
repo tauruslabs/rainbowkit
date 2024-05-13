@@ -14,7 +14,7 @@ Implementasi `ConnectButton` default juga akan menampilkan indikator pemuatan di
 Untuk menggunakan fitur ini, pertama aktifkan opsi `showRecentTransactions` di `RainbowKitProvider`.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 Transaksi kemudian dapat didaftarkan dengan RainbowKit menggunakan hook `useAddRecentTransaction`.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ Setelah transaksi telah didaftarkan dengan RainbowKit, statusnya akan diperbarui
 Secara default, transaksi akan dianggap selesai setelah satu blok ditambang di atas blok tempat transaksi ditambang, tetapi ini dapat dikonfigurasi dengan menentukan nilai `confirmations` kustom.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

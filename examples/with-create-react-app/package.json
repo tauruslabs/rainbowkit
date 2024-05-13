@@ -3,7 +3,7 @@
   "version": "0.1.86",
   "private": true,
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
+    "@merkletrade/rainbowkit": "workspace:*",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
@@ -25,7 +25,7 @@
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@rainbow-me)/\"",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@merkletrade)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -12,11 +12,11 @@ description: Начните работу с RainbowKit
 Вы можете создать новое приложение RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) с помощью одной из следующих команд, используя выбранный вами пакетный менеджер:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 Вас попросят указать имя проекта, после чего будет создана новая директория с шаблоном проекта и установлены все необходимые зависимости.
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 Установите RainbowKit и его пиринговые зависимости, [wagmi](https://wagmi.sh/), [viem](https://viem.sh), и [@tanstack/react-query](https://tanstack.com/query/v5).
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > Примечание: RainbowKit - это библиотека [React](https://reactjs.org/).
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 Импортируйте RainbowKit, Wagmi и TanStack Query.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 Затем, в вашем приложении, импортируйте и отобразите компонент `ConnectButton`.
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ RainbowKit теперь будет обрабатывать выбор коше�
 
 В предыдущих версиях RainbowKit, которые полагались на [ethers](https://docs.ethers.org/v5/), модули `fs`, `net` и `tls` были автоматически заполнены полифилами. Теперь это уже не так с RainbowKit v1 + wagmi v1, которые построены на [viem](https://viem.sh/).
 
-Ссылка на наши образцы [Конфигурация Webpack в Next.js](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Конфигурация Webpack Router приложения Next.js](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js) и [Полифиллы Create React App](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) для руководства по настройке вашего проекта.
+Ссылка на наши образцы [Конфигурация Webpack в Next.js](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Конфигурация Webpack Router приложения Next.js](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js) и [Полифиллы Create React App](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) для руководства по настройке вашего проекта.
 
 ##### Vite
 
-Сборщик [Vite](https://vitejs.dev) не предоставляет полифиллы для Node, поэтому вам потребуется включить полифиллы для `global`, `Buffer` и `process.env`. В качестве примера вы можете ссылаться на [полифиллы в нашем образце проекта Vite](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
+Сборщик [Vite](https://vitejs.dev) не предоставляет полифиллы для Node, поэтому вам потребуется включить полифиллы для `global`, `Buffer` и `process.env`. В качестве примера вы можете ссылаться на [полифиллы в нашем образце проекта Vite](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
 
 ##### Remix
 
 При использовании [Remix](https://remix.run), все точки входа пакета RainbowKit должны быть добавлены в ваш список [зависимостей сервера](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) в вашем Remix config, поскольку они публикуются как пакеты ESM.
 
-Remix также требует, чтобы вы добавили полифиллы для `global`, `Buffer` и `process.env`. Используйте [polyfills в нашем примере проекта Remix](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
+Remix также требует, чтобы вы добавили полифиллы для `global`, `Buffer` и `process.env`. Используйте [polyfills в нашем примере проекта Remix](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
 
 ```js
 /**
@@ -139,8 +139,8 @@ Remix также требует, чтобы вы добавили полифил
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ module.exports = {
 
 ### Дальнейшие примеры
 
-Чтобы увидеть некоторые рабочие примеры RainbowKit или даже использовать их для автоматического создания нового проекта, ознакомьтесь с [официальными примерами](https://github.com/rainbow-me/rainbowkit/tree/main/examples).
+Чтобы увидеть некоторые рабочие примеры RainbowKit или даже использовать их для автоматического создания нового проекта, ознакомьтесь с [официальными примерами](https://github.com/merkletrade/rainbowkit/tree/main/examples).
 
 Чтобы попробовать RainbowKit прямо в вашем браузере, проверьте ссылки на CodeSandbox ниже:
 
-- с [Create React App](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- с [Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- с [Next.js App Router](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- с [Remix](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- с [Vite](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- с [Create React App](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- с [Next.js](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- с [Next.js App Router](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- с [Remix](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- с [Vite](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)

@@ -1,5 +1,5 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 
@@ -8,12 +8,12 @@ import {
   getDefaultWallets,
   Locale,
   getDefaultConfig,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import {
   argentWallet,
   trustWallet,
   ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 import { WagmiProvider } from 'wagmi';
 import {
   arbitrum,

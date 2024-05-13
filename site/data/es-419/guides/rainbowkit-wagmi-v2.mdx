@@ -13,7 +13,7 @@ Sigue los pasos a continuación para migrar.
 **1. Actualice RainbowKit, `wagmi`, y `viem` a sus últimas versiones**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. Instalar la dependencia paralela `@tanstack/react-query`**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. RainbowKitProvider**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ Ya no necesitas pasar `chains` a `<RainbowKitProvider>`.
 El tipo `Chain` ha cambiado de acuerdo con Wagmi v2, y continúa soportando los metadatos `iconUrl` e `iconBackground` de RainbowKit.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 Ejemplo con `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ RainbowKit ha adoptado el conector `WalletConnectLegacyConnector` en `wagmi` par
 
 Los conectores de billetera ahora también soportan el estándar EIP-6963 con la propiedad `rdns`. Asegúrese de que esto esté poblado para evitar referencias duplicadas a billeteras que soportan EIP-6963 en su lista de billeteras.
 
-> Por favor, reporte cualquier problema o retroalimentación para RainbowKit v2 en GitHub [aquí](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> Por favor, reporte cualquier problema o retroalimentación para RainbowKit v2 en GitHub [aquí](https://github.com/merkletrade/rainbowkit/issues/new/choose).

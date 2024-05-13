@@ -15,7 +15,7 @@ title: دليل الترحيل
 **1. قم بترقية RainbowKit، `wagmi`، و `viem` إلى أحدث إصداراتها**
 
 ```bash
-npm i @rainbow-me/rainbowkit@2 wagmi@2 viem@2.x
+npm i @merkletrade/rainbowkit@2 wagmi@2 viem@2.x
 ```
 
 \*\*2. تثبيت تبعية النظير `@tanstack/react-query`
@@ -31,7 +31,7 @@ npm i @tanstack/react-query
 **3. قم بترقية تكوينات RainbowKit و Wagmi الخاصة بك**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -39,9 +39,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -138,7 +138,7 @@ const config = getDefaultConfig({
 تغير نوع `Chain` وفقًا لـ Wagmi v2، ويستمر في دعم بيانات `iconUrl` و `iconBackground` الوصفية لـ RainbowKit.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -179,7 +179,7 @@ const config = getDefaultConfig({
 مثال باستخدام `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -212,7 +212,7 @@ const config = getDefaultConfig({
 **1. ترقية RainbowKit و `wagmi` إلى أحدث نسخة**
 
 ```bash
-npm i @rainbow-me/rainbowkit@^1 wagmi@^1
+npm i @merkletrade/rainbowkit@^1 wagmi@^1
 ```
 
 \*\*2. تثبيت التبعية المتبادلة `viem`\*\*
@@ -229,7 +229,7 @@ npm i viem
 
 في الإصدارات السابقة من wagmi التي تعتمد على [ethers](https://docs.ethers.org/v5/)، كانت الوحدات `fs`، `net`، و `tls` المطلوبة من WalletConnect يتم تلقائيا polyfilled. هذا لم يعد الحال مع RainbowKit v1 + wagmi v1، اللذان تم بناؤهما على [viem](https://viem.sh/).
 
-راجع [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js) و أمثلة [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) لتوجيهات التكوين لمشروعك.
+راجع [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js) و أمثلة [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) لتوجيهات التكوين لمشروعك.
 
 متوفر دلائل إطار العمل الإضافية لـ Vite و Remix [here](https://www.rainbowkit.com/docs/installation#additional-build-tooling-setup).
 
@@ -254,7 +254,7 @@ npm i viem
 #### 1. قم بترقية RainbowKit و `wagmi` إلى أحدث نسخة لهم
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.12.0 wagmi@^0.12.0
+npm i @merkletrade/rainbowkit@^0.12.0 wagmi@^0.12.0
 ```
 
 #### 2. أقدم projectId من WalletConnect Cloud
@@ -294,7 +294,7 @@ const connectors = connectorsForWallets([
 #### 1. قم بترقية RainbowKit و `wagmi` إلى أحدث نسخة لهم
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.11.0 wagmi@^0.11.0
+npm i @merkletrade/rainbowkit@^0.11.0 wagmi@^0.11.0
 ```
 
 #### 2. تحقق من التغييرات الكبيرة في `wagmi`
@@ -312,7 +312,7 @@ npm i @rainbow-me/rainbowkit@^0.11.0 wagmi@^0.11.0
 #### 1. قم بترقية RainbowKit و `wagmi` إلى أحدث نسخة لهم
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.10.0 wagmi@^0.10.0
+npm i @merkletrade/rainbowkit@^0.10.0 wagmi@^0.10.0
 ```
 
 #### 2. تحقق من التغييرات الكبيرة في `wagmi`
@@ -330,7 +330,7 @@ npm i @rainbow-me/rainbowkit@^0.10.0 wagmi@^0.10.0
 #### 1. قم بترقية RainbowKit و `wagmi` إلى أحدث نسخة لهم
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.9.0 wagmi@^0.9.0
+npm i @merkletrade/rainbowkit@^0.9.0 wagmi@^0.9.0
 ```
 
 #### 2. تحقق من التغييرات الكبيرة في `wagmi`
@@ -348,7 +348,7 @@ npm i @rainbow-me/rainbowkit@^0.9.0 wagmi@^0.9.0
 #### 1. قم بترقية RainbowKit و `wagmi` إلى أحدث نسخة لهم
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.8.0 wagmi@^0.8.0
+npm i @merkletrade/rainbowkit@^0.8.0 wagmi@^0.8.0
 ```
 
 #### 2. تحقق من التغييرات الكبيرة في `wagmi`
@@ -362,15 +362,15 @@ npm i @rainbow-me/rainbowkit@^0.8.0 wagmi@^0.8.0
 إذا كنت تنشئ قائمة محافظ مخصصة، يجب عليك الآن استيراد كل محفظة بشكل مستقل لتقليل حجم الحزمة. لاحظ أن المحافظ لم تعد موجهة أسمائيا عبر كائن `المحفظة`، فجميع المحافظ لديها الآن لاحقة `Wallet`.
 
 ```diff
--import { connectorsForWallets, wallet } from '@rainbow-me/rainbowkit';
-+import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+-import { connectorsForWallets, wallet } from '@merkletrade/rainbowkit';
++import { connectorsForWallets } from '@merkletrade/rainbowkit';
 +import {
 +  injectedWallet,
 +  rainbowWallet,
 +  metaMaskWallet,
 +  coinbaseWallet,
 +  walletConnectWallet,
-+} from '@rainbow-me/rainbowkit/wallets';
++} from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.injected({ chains }),
@@ -389,8 +389,8 @@ const wallets = [
 كما نلاحظ أن طبقة التوافق الخلفي لـ Steakwallet تمت إزالتها. يجب استخدام Omni بدلاً من ذلك.
 
 ```diff
--import { wallet } from '@rainbow-me/rainbowkit';
-+import { omniWallet } from '@rainbow-me/rainbowkit/wallets';
+-import { wallet } from '@merkletrade/rainbowkit';
++import { omniWallet } from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.steak({ chains }),
@@ -409,7 +409,7 @@ const wallets = [
 ترقية RainbowKit و wagmi إلى أحدث إصدار لها
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.4.0 wagmi@^0.5.0
+npm i @merkletrade/rainbowkit@^0.4.0 wagmi@^0.5.0
 ```
 
 #### 2. تحقق من التغييرات الكبيرة في `wagmi`
@@ -427,7 +427,7 @@ npm i @rainbow-me/rainbowkit@^0.4.0 wagmi@^0.5.0
 إذا قمت سابقًا بإشتقاق عناوين URL لـ RPC من `chainId` على `createConnector`, يمكنك الآن إزالة هذه المنطق حيث أن `wagmi` يعالج الآن عناوين URL لـ RPC داخليًا عند استخدامها مع `configureChains`.
 
 ```diff
-import { connectorsForWallets, wallet, Chain, Wallet } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, wallet, Chain, Wallet } from '@merkletrade/rainbowkit';
 import { chain, configureChains } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -489,7 +489,7 @@ const connectors = connectorsForWallets([
 ترقية RainbowKit و wagmi إلى أحدث إصدار لها
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
+npm i @merkletrade/rainbowkit@^0.2.0 wagmi@^0.4.2
 ```
 
 #### 2. استبدال استيراد configureChains
@@ -497,7 +497,7 @@ npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
 استورد `configureChains` من wagmi بدلاً من RainbowKit:
 
 ```diff
-- import { configureChains } from '@rainbow-me/rainbowkit';
+- import { configureChains } from '@merkletrade/rainbowkit';
 + import { configureChains } from 'wagmi';
 ```
 
@@ -506,7 +506,7 @@ npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
 RainbowKit لم يعد يتصدر `apiProvider` API. استبدله بالمزود المطلوب من wagmi.
 
 ```diff
-- import { apiProvider } from '@rainbow-me/rainbowkit';
+- import { apiProvider } from '@merkletrade/rainbowkit';
 ```
 
 #### الكيمياء

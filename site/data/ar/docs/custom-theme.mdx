@@ -14,7 +14,7 @@ description: إنشاء سمة مخصصة
 بينما تقدم السمات المدمجة بعض درجات التخصيص، يتم توفير نوع `Theme` لمساعدتك على تعريف سماتك المخصصة الخاصة بهك بالوصول على مستوى أدنى إلى متغيرات السمة الأساسية.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 ثم، ادمج السمة المدمجة، مع رموز السمة التي تود تجاوزها. في هذا المثال، أقوم بتجاوز الرمز `accentColor` ليتوافق مع لون العلامة التجارية لدي.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

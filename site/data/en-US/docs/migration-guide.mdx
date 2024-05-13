@@ -15,7 +15,7 @@ Follow the steps below to migrate.
 **1. Upgrade RainbowKit, `wagmi`, and `viem` to their latest versions**
 
 ```bash
-npm i @rainbow-me/rainbowkit@2 wagmi@2 viem@2.x
+npm i @merkletrade/rainbowkit@2 wagmi@2 viem@2.x
 ```
 
 **2. Install `@tanstack/react-query` peer dependency**
@@ -31,7 +31,7 @@ npm i @tanstack/react-query
 **3. Upgrade your RainbowKit and Wagmi configurations**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -39,9 +39,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -138,7 +138,7 @@ You no longer need to pass `chains` to `<RainbowKitProvider>`.
 The `Chain` type has changed in accordance with Wagmi v2, and continues to support RainbowKit's `iconUrl` and `iconBackground` metadata.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -179,7 +179,7 @@ const config = getDefaultConfig({
 Example with `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -197,7 +197,7 @@ Example with `createConfig`:
 
 **5. Custom Wallets**
 
-RainbowKit wallet connectors have undergone substantial changes to support Wagmi v2. Reference the [updated docs](https://www.rainbowkit.com/docs/custom-wallets) and an [example connector](https://github.com/rainbow-me/rainbowkit/blob/main/packages/rainbowkit/src/wallets/walletConnectors/rainbowWallet/rainbowWallet.ts) to upgrade any Custom Wallet Connectors in your dApp.
+RainbowKit wallet connectors have undergone substantial changes to support Wagmi v2. Reference the [updated docs](https://www.rainbowkit.com/docs/custom-wallets) and an [example connector](https://github.com/merkletrade/rainbowkit/blob/main/packages/rainbowkit/src/wallets/walletConnectors/rainbowWallet/rainbowWallet.ts) to upgrade any Custom Wallet Connectors in your dApp.
 
 Wallet connectors also now support the EIP-6963 standard with the `rdns` prop. Ensure that this is populated to prevent duplicate references to EIP-6963 supporting wallets in your wallet list.
 
@@ -212,7 +212,7 @@ Follow the steps below to migrate.
 **1. Upgrade RainbowKit and `wagmi` to their latest version**
 
 ```bash
-npm i @rainbow-me/rainbowkit@^1 wagmi@^1
+npm i @merkletrade/rainbowkit@^1 wagmi@^1
 ```
 
 **2. Install `viem` peer dependency**
@@ -229,7 +229,7 @@ Note: wagmi no longer uses the `ethers` package internally. But if you rely on t
 
 In previous versions of wagmi that relied on [ethers](https://docs.ethers.org/v5/), the `fs`, `net`, and `tls` modules required by WalletConnect were automatically polyfilled. This is no longer the case with RainbowKit v1 + wagmi v1, which are built on [viem](https://viem.sh/).
 
-Reference our [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js) and [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) samples for configuration guidance for your project.
+Reference our [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js) and [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) samples for configuration guidance for your project.
 
 Additional framework guides for Vite and Remix are available [here](https://www.rainbowkit.com/docs/installation#additional-build-tooling-setup).
 
@@ -254,7 +254,7 @@ Follow the steps below to migrate.
 #### 1. Upgrade RainbowKit and `wagmi` to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.12.0 wagmi@^0.12.0
+npm i @merkletrade/rainbowkit@^0.12.0 wagmi@^0.12.0
 ```
 
 #### 2. Supply a WalletConnect Cloud projectId
@@ -294,7 +294,7 @@ Follow the steps below to migrate.
 #### 1. Upgrade RainbowKit and `wagmi` to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.11.0 wagmi@^0.11.0
+npm i @merkletrade/rainbowkit@^0.11.0 wagmi@^0.11.0
 ```
 
 #### 2. Check for breaking changes in `wagmi`
@@ -312,7 +312,7 @@ Follow the steps below to migrate.
 #### 1. Upgrade RainbowKit and `wagmi` to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.10.0 wagmi@^0.10.0
+npm i @merkletrade/rainbowkit@^0.10.0 wagmi@^0.10.0
 ```
 
 #### 2. Check for breaking changes in `wagmi`
@@ -330,7 +330,7 @@ Follow the steps below to migrate.
 #### 1. Upgrade RainbowKit and `wagmi` to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.9.0 wagmi@^0.9.0
+npm i @merkletrade/rainbowkit@^0.9.0 wagmi@^0.9.0
 ```
 
 #### 2. Check for breaking changes in `wagmi`
@@ -348,7 +348,7 @@ Follow the steps below to migrate.
 #### 1. Upgrade RainbowKit and `wagmi` to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.8.0 wagmi@^0.8.0
+npm i @merkletrade/rainbowkit@^0.8.0 wagmi@^0.8.0
 ```
 
 #### 2. Check for breaking changes in `wagmi`
@@ -362,15 +362,15 @@ If you use `wagmi` hooks in your application, you will need to check if your app
 If you're creating a custom wallet list, you must now import each wallet individually in order to reduce bundle size. Note that since wallets are no longer namespaced via the `wallet` object, all wallets now have a `Wallet` suffix.
 
 ```diff
--import { connectorsForWallets, wallet } from '@rainbow-me/rainbowkit';
-+import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+-import { connectorsForWallets, wallet } from '@merkletrade/rainbowkit';
++import { connectorsForWallets } from '@merkletrade/rainbowkit';
 +import {
 +  injectedWallet,
 +  rainbowWallet,
 +  metaMaskWallet,
 +  coinbaseWallet,
 +  walletConnectWallet,
-+} from '@rainbow-me/rainbowkit/wallets';
++} from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.injected({ chains }),
@@ -389,8 +389,8 @@ const wallets = [
 Also note that the Steakwallet backwards compatibility layer has been removed. Omni should be used instead.
 
 ```diff
--import { wallet } from '@rainbow-me/rainbowkit';
-+import { omniWallet } from '@rainbow-me/rainbowkit/wallets';
+-import { wallet } from '@merkletrade/rainbowkit';
++import { omniWallet } from '@merkletrade/rainbowkit/wallets';
 
 const wallets = [
 -  wallet.steak({ chains }),
@@ -409,7 +409,7 @@ Follow the steps below to migrate.
 Upgrade RainbowKit and wagmi to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.4.0 wagmi@^0.5.0
+npm i @merkletrade/rainbowkit@^0.4.0 wagmi@^0.5.0
 ```
 
 #### 2. Check for breaking changes in `wagmi`
@@ -427,7 +427,7 @@ Removed the `chainId` parameter from `createConnector` on the `Wallet` type.
 If you previously derived RPC URLs from the `chainId` on `createConnector`, you can now remove that logic as `wagmi` now handles RPC URLs internally when used with `configureChains`.
 
 ```diff
-import { connectorsForWallets, wallet, Chain, Wallet } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, wallet, Chain, Wallet } from '@merkletrade/rainbowkit';
 import { chain, configureChains } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -489,7 +489,7 @@ Follow the steps below to migrate.
 Upgrade RainbowKit and wagmi to their latest version
 
 ```bash
-npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
+npm i @merkletrade/rainbowkit@^0.2.0 wagmi@^0.4.2
 ```
 
 #### 2. Replace configureChains import
@@ -497,7 +497,7 @@ npm i @rainbow-me/rainbowkit@^0.2.0 wagmi@^0.4.2
 Import `configureChains` from wagmi instead of RainbowKit:
 
 ```diff
-- import { configureChains } from '@rainbow-me/rainbowkit';
+- import { configureChains } from '@merkletrade/rainbowkit';
 + import { configureChains } from 'wagmi';
 ```
 
@@ -506,7 +506,7 @@ Import `configureChains` from wagmi instead of RainbowKit:
 RainbowKit no longer exports an `apiProvider` API. Replace it with your desired provider from wagmi.
 
 ```diff
-- import { apiProvider } from '@rainbow-me/rainbowkit';
+- import { apiProvider } from '@merkletrade/rainbowkit';
 ```
 
 #### Alchemy

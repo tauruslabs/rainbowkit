@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "workspace:*",
+    "@merkletrade/rainbowkit": "workspace:*",
     "@tanstack/react-query": "^5.28.4",
     "next": "^14.2.3",
     "react": "^18.3.0",

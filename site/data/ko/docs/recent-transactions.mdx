@@ -14,7 +14,7 @@ RainbowKit의 계정 모달 내에서 최근 거래 내역을 표시하도록 �
 이 기능을 사용하려면 먼저 `RainbowKitProvider`에 `showRecentTransactions` 옵션을 활성화해야 합니다.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 그런 다음 `useAddRecentTransaction` hook을 사용하여 거래를 RainbowKit에 등록할 수 있습니다.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ export default () => {
 기본적으로 트랜잭션이 채굴된 블록 위에 단일 블록이 채굴되면 트랜잭션은 완료로 간주되지만, 사용자 정의 `confirmations` 값을 지정하여 이를 설정할 수 있습니다.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

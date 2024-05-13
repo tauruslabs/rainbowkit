@@ -14,7 +14,7 @@ description: 사용자 정의 테마 생성
 내장 테마가 일정 수준의 사용자 정의를 제공하면서도, `Theme` 타입은 기본 테마 변수에 대한 하위 수준 액세스를 통해 자신만의 사용자 정의 테마를 정의하는 데 도움을 줍니다.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 그런 다음, 내장된 테마와 덮어 쓰려는 테마 토큰을 병합하십시오. 이 예에서는, 나의 브랜드의 강조 색상에 맞게 `accentColor` 토큰을 덮어 씁니다.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

@@ -14,7 +14,7 @@ Varsayılan `ConnectButton` uygulaması, bekleyen işlemler varsa kullanıcını
 Bu özelliği kullanmak için, öncelikle `RainbowKitProvider` da `showRecentTransactions` seçeneğini etkinleştirin.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 İşlemler daha sonra `useAddRecentTransaction` kancasını kullanarak RainbowKit ile kaydedilebilir.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ Bir işlem RainbowKit ile kaydedildikten sonra, durumu tamamlanma üzerine günc
 Varsayılan olarak, işlem bir işlem yapıldıktan sonra tek bir blok çıkarıldığında tamamlanmış sayılacaktır, ancak bunu özel bir `confirmations` değeri belirterek yapılandırabilirsiniz.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

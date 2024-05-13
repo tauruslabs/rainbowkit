@@ -13,7 +13,7 @@ Suivez les étapes ci-dessous pour migrer.
 **1. Mettez à jour RainbowKit, `wagmi`, et `viem` vers leurs dernières versions**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. Installez la dépendance parallèle `@tanstack/react-query`**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. Mettez à jour vos configurations RainbowKit et Wagmi**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ Vous n'avez plus besoin de passer `chains` à `<RainbowKitProvider>`.
 Le type `Chain` a changé conformément à Wagmi v2, et continue de supporter les métadonnées `iconUrl` et `iconBackground` de RainbowKit.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 Exemple avec `createConfig` :
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ Les connecteurs de portefeuille RainbowKit ont subi d'importantes modifications 
 
 Les connecteurs de portefeuille prennent également désormais en charge la norme EIP-6963 avec la propriété `rdns`. Assurez-vous que cela est renseigné pour éviter les références en double aux portefeuilles prenant en charge l'EIP-6963 dans votre liste de portefeuilles.
 
-> Veuillez signaler tout problème ou commentaire concernant RainbowKit v2 sur GitHub [ici](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> Veuillez signaler tout problème ou commentaire concernant RainbowKit v2 sur GitHub [ici](https://github.com/merkletrade/rainbowkit/issues/new/choose).

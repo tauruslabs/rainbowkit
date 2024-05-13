@@ -9,16 +9,16 @@ description: वॉलेट सूची को कस्टमाइज़ क
 
 > नोट: यह API अस्थिर है और आने वाले समय में बदलने की संभावना है। हम वॉलेट सूची में परिवर्तन करने से बचने का सुझाव देते हैं अभी के लिए।
 
-आप `'@rainbow-me/rainbowkit/wallets'` से व्यक्तिगत वॉलेट्स आयात कर सकते हैं उनके आवश्यक कनेक्टर्स के साथ अपनी स्वयं की वॉलेट सूची तैयार करने के लिए `connectorsForWallets` कार्य के साथ। इस तरह आपका पूरा नियंत्रण होता है कि कौन से वॉलेट्स प्रदर्शित करने हैं, और किस क्रम में।
+आप `'@merkletrade/rainbowkit/wallets'` से व्यक्तिगत वॉलेट्स आयात कर सकते हैं उनके आवश्यक कनेक्टर्स के साथ अपनी स्वयं की वॉलेट सूची तैयार करने के लिए `connectorsForWallets` कार्य के साथ। इस तरह आपका पूरा नियंत्रण होता है कि कौन से वॉलेट्स प्रदर्शित करने हैं, और किस क्रम में।
 
 उदाहरण के लिए, आप सामान्य फ़ॉलबैक वॉलेट्स के साथ केवल Rainbow दिखाने का चयन कर सकते हैं।
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -37,7 +37,7 @@ const connectors = connectorsForWallets(
 आप अपने कनेक्टर्स को Wagmi के `createConfig` में पास कर सकते हैं।
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import { createConfig } from 'wagmi';
 
 const connectors = connectorsForWallets(/* ... */);
@@ -75,7 +75,7 @@ const App = () => (
 **यह सिफारिश की जाती है कि आप इस वॉलेट को सूची में हमेशा शामिल करें ताकि सुनिश्चित किया जाए कि सभी WalletConnect-आधारित वॉलेट्स समर्थित हैं।**
 
 ```tsx
-import { walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
+import { walletConnectWallet } from '@merkletrade/rainbowkit/wallets';
 
 walletConnectWallet(options: {
   projectId: string;
@@ -95,7 +95,7 @@ walletConnectWallet(options: {
 **यह सिफारिश की जाती है कि आप हमेशा इस वॉलेट को सूची में शामिल करें ताकि सभी इंजेक्टेड वॉलेट्स का समर्थन किया जा सके।**
 
 ```tsx
-import { injectedWallet } from '@rainbow-me/rainbowkit/wallets';
+import { injectedWallet } from '@merkletrade/rainbowkit/wallets';
 
 injectedWallet();
 ```
@@ -107,7 +107,7 @@ injectedWallet();
 #### Argent
 
 ```tsx
-import { argentWallet } from '@rainbow-me/rainbowkit/wallets';
+import { argentWallet } from '@merkletrade/rainbowkit/wallets';
 
 argentWallet(options: {
   projectId: string;
@@ -117,7 +117,7 @@ argentWallet(options: {
 #### बिटगेट
 
 ```tsx
-import { bitgetWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bitgetWallet } from '@merkletrade/rainbowkit/wallets';
 
 bitgetWallet(options: {
   projectId: string;
@@ -127,7 +127,7 @@ bitgetWallet(options: {
 #### बिफ्रॉस्ट वॉलेट
 
 ```tsx
-import { bifrostWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bifrostWallet } from '@merkletrade/rainbowkit/wallets';
 
 bifrostWallet(options: {
   projectId: string;
@@ -137,7 +137,7 @@ bifrostWallet(options: {
 #### बिट्स्की
 
 ```tsx
-import { bitskiWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bitskiWallet } from '@merkletrade/rainbowkit/wallets';
 
 bitskiWallet();
 ```
@@ -145,7 +145,7 @@ bitskiWallet();
 #### ब्लूम वॉलेट
 
 ```tsx
-import { bloomWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bloomWallet } from '@merkletrade/rainbowkit/wallets';
 
 bloomWallet(options: {
   projectId: string;
@@ -155,7 +155,7 @@ bloomWallet(options: {
 #### ब्रेव वॉलेट
 
 ```tsx
-import { braveWallet } from '@rainbow-me/rainbowkit/wallets';
+import { braveWallet } from '@merkletrade/rainbowkit/wallets';
 
 braveWallet();
 ```
@@ -163,7 +163,7 @@ braveWallet();
 #### Coinbase Wallet
 
 ```tsx
-import { coinbaseWallet } from '@rainbow-me/rainbowkit/wallets';
+import { coinbaseWallet } from '@merkletrade/rainbowkit/wallets';
 
 coinbaseWallet(options: {
   appName: string;
@@ -173,7 +173,7 @@ coinbaseWallet(options: {
 #### Coin98 Wallet
 
 ```tsx
-import { coin98Wallet } from '@rainbow-me/rainbowkit/wallets';
+import { coin98Wallet } from '@merkletrade/rainbowkit/wallets';
 
 coin98Wallet(options: {
   projectId: string;
@@ -183,7 +183,7 @@ coin98Wallet(options: {
 #### Core
 
 ```tsx
-import { coreWallet } from '@rainbow-me/rainbowkit/wallets';
+import { coreWallet } from '@merkletrade/rainbowkit/wallets';
 
 coreWallet(options: {
   projectId: string;
@@ -193,7 +193,7 @@ coreWallet(options: {
 #### Dawn Wallet
 
 ```tsx
-import { dawnWallet } from '@rainbow-me/rainbowkit/wallets';
+import { dawnWallet } from '@merkletrade/rainbowkit/wallets';
 
 dawnWallet();
 ```
@@ -201,7 +201,7 @@ dawnWallet();
 #### Enkrypt Wallet
 
 ```tsx
-import { enkryptWallet } from '@rainbow-me/rainbowkit/wallets';
+import { enkryptWallet } from '@merkletrade/rainbowkit/wallets';
 
 enkryptWallet();
 ```
@@ -209,7 +209,7 @@ enkryptWallet();
 #### FoxWallet
 
 ```tsx
-import { foxWallet } from '@rainbow-me/rainbowkit/wallets';
+import { foxWallet } from '@merkletrade/rainbowkit/wallets';
 
 foxWallet(options: {
   projectId: string;
@@ -219,7 +219,7 @@ foxWallet(options: {
 #### Frame Wallet
 
 ```tsx
-import { frameWallet } from '@rainbow-me/rainbowkit/wallets';
+import { frameWallet } from '@merkletrade/rainbowkit/wallets';
 
 frameWallet();
 ```
@@ -227,7 +227,7 @@ frameWallet();
 #### Frontier Wallet
 
 ```tsx
-import { frontierWallet } from '@rainbow-me/rainbowkit/wallets';
+import { frontierWallet } from '@merkletrade/rainbowkit/wallets';
 
 frontierWallet(options: {
   projectId: string;
@@ -237,7 +237,7 @@ frontierWallet(options: {
 #### Ledger Live
 
 ```tsx
-import { ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
+import { ledgerWallet } from '@merkletrade/rainbowkit/wallets';
 
 ledgerWallet(options: {
   projectId: string;
@@ -247,7 +247,7 @@ ledgerWallet(options: {
 #### imToken
 
 ```tsx
-import { imTokenWallet } from '@rainbow-me/rainbowkit/wallets';
+import { imTokenWallet } from '@merkletrade/rainbowkit/wallets';
 
 imTokenWallet(options: {
   projectId: string;
@@ -257,7 +257,7 @@ imTokenWallet(options: {
 #### क्रेसस वॉलेट
 
 ```tsx
-import { kresusWallet } from '@rainbow-me/rainbowkit/wallets';
+import { kresusWallet } from '@merkletrade/rainbowkit/wallets';
 
 kresusWallet(options: {
   projectId: string;
@@ -267,7 +267,7 @@ kresusWallet(options: {
 #### MetaMask
 
 ```tsx
-import { metaMaskWallet } from '@rainbow-me/rainbowkit/wallets';
+import { metaMaskWallet } from '@merkletrade/rainbowkit/wallets';
 
 metaMaskWallet(options: {
   projectId: string;
@@ -277,7 +277,7 @@ metaMaskWallet(options: {
 #### MEW Wallet
 
 ```tsx
-import { mewWallet } from '@rainbow-me/rainbowkit/wallets';
+import { mewWallet } from '@merkletrade/rainbowkit/wallets';
 
 mewWallet();
 ```
@@ -285,7 +285,7 @@ mewWallet();
 #### OKX Wallet
 
 ```tsx
-import { okxWallet } from '@rainbow-me/rainbowkit/wallets';
+import { okxWallet } from '@merkletrade/rainbowkit/wallets';
 
 okxWallet(options: {
   projectId: string;
@@ -295,7 +295,7 @@ okxWallet(options: {
 #### Omni
 
 ```tsx
-import { omniWallet } from '@rainbow-me/rainbowkit/wallets';
+import { omniWallet } from '@merkletrade/rainbowkit/wallets';
 
 omniWallet(options: {
   projectId: string;
@@ -305,7 +305,7 @@ omniWallet(options: {
 #### OneKey
 
 ```tsx
-import { oneKeyWallet } from '@rainbow-me/rainbowkit/wallets';
+import { oneKeyWallet } from '@merkletrade/rainbowkit/wallets';
 
 oneKeyWallet();
 ```
@@ -313,7 +313,7 @@ oneKeyWallet();
 #### Phantom
 
 ```tsx
-import { phantomWallet } from '@rainbow-me/rainbowkit/wallets';
+import { phantomWallet } from '@merkletrade/rainbowkit/wallets';
 
 phantomWallet();
 ```
@@ -321,7 +321,7 @@ phantomWallet();
 #### Rabby Wallet
 
 ```tsx
-import { rabbyWallet } from '@rainbow-me/rainbowkit/wallets';
+import { rabbyWallet } from '@merkletrade/rainbowkit/wallets';
 
 rabbyWallet();
 ```
@@ -329,7 +329,7 @@ rabbyWallet();
 #### Rainbow
 
 ```tsx
-import { rainbowWallet } from '@rainbow-me/rainbowkit/wallets';
+import { rainbowWallet } from '@merkletrade/rainbowkit/wallets';
 
 rainbowWallet(options: {
   projectId: string;
@@ -339,7 +339,7 @@ rainbowWallet(options: {
 #### रैम्पर वॉलेट
 
 ```tsx
-import { ramperWallet } from '@rainbow-me/rainbowkit/wallets';
+import { ramperWallet } from '@merkletrade/rainbowkit/wallets';
 
 ramperWallet();
 ```
@@ -347,7 +347,7 @@ ramperWallet();
 #### रोनिन वॉलेट
 
 ```tsx
-import { roninWallet } from '@rainbow-me/rainbowkit/wallets';
+import { roninWallet } from '@merkletrade/rainbowkit/wallets';
 
 roninWallet(options: {
   projectId: string;
@@ -357,7 +357,7 @@ roninWallet(options: {
 #### सेफ (ग्नोसिस सेफ)
 
 ```tsx
-import { safeWallet } from '@rainbow-me/rainbowkit/wallets';
+import { safeWallet } from '@merkletrade/rainbowkit/wallets';
 
 safeWallet();
 ```
@@ -365,7 +365,7 @@ safeWallet();
 #### Safeheron
 
 ```tsx
-import { safeheronWallet } from '@rainbow-me/rainbowkit/wallets';
+import { safeheronWallet } from '@merkletrade/rainbowkit/wallets';
 
 safeheronWallet();
 ```
@@ -373,7 +373,7 @@ safeheronWallet();
 #### Taho
 
 ```tsx
-import { tahoWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tahoWallet } from '@merkletrade/rainbowkit/wallets';
 
 tahoWallet();
 ```
@@ -381,7 +381,7 @@ tahoWallet();
 #### Talisman
 
 ```tsx
-import { talismanWallet } from '@rainbow-me/rainbowkit/wallets';
+import { talismanWallet } from '@merkletrade/rainbowkit/wallets';
 
 talismanWallet();
 ```
@@ -389,7 +389,7 @@ talismanWallet();
 #### Tokenary
 
 ```tsx
-import { tokenaryWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tokenaryWallet } from '@merkletrade/rainbowkit/wallets';
 
 tokenaryWallet();
 ```
@@ -397,7 +397,7 @@ tokenaryWallet();
 #### TokenPocket
 
 ```tsx
-import { tokenPocketWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tokenPocketWallet } from '@merkletrade/rainbowkit/wallets';
 
 tokenPocketWallet(options: {
   projectId: string;
@@ -407,7 +407,7 @@ tokenPocketWallet(options: {
 #### Trust Wallet
 
 ```tsx
-import { trustWallet } from '@rainbow-me/rainbowkit/wallets';
+import { trustWallet } from '@merkletrade/rainbowkit/wallets';
 
 trustWallet(options: {
   projectId: string;
@@ -417,7 +417,7 @@ trustWallet(options: {
 #### Uniswap Wallet
 
 ```tsx
-import { uniswapWallet } from '@rainbow-me/rainbowkit/wallets';
+import { uniswapWallet } from '@merkletrade/rainbowkit/wallets';
 
 uniswapWallet(options: {
   projectId: string;
@@ -427,7 +427,7 @@ uniswapWallet(options: {
 #### XDEFI Wallet
 
 ```tsx
-import { xdefiWallet } from '@rainbow-me/rainbowkit/wallets';
+import { xdefiWallet } from '@merkletrade/rainbowkit/wallets';
 
 xdefiWallet();
 ```
@@ -435,7 +435,7 @@ xdefiWallet();
 #### Zerion
 
 ```tsx
-import { zerionWallet } from '@rainbow-me/rainbowkit/wallets';
+import { zerionWallet } from '@merkletrade/rainbowkit/wallets';
 
 zerionWallet(options: {
   projectId: string;
@@ -451,11 +451,11 @@ zerionWallet(options: {
 मेटामास्क के साथ सामान्य फॉलबैक वॉलेट्स दिखाएं।
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   metaMaskWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -471,13 +471,13 @@ const connectors = connectorsForWallets(
 रेनबो, मेटामास्क और कोइनबेस को सामान्य फ़ॉलबैक वॉलेट्स के साथ दिखाएं।
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   metaMaskWallet,
   coinbaseWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -504,13 +504,13 @@ const connectors = connectorsForWallets(
 रेनबो और मेटामास्क की सिफारिश करें, लेकिन सामान्य फ़ॉलबैक वॉलेट्स के साथ कोइनबेस की भी पेशकश करें।
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   metaMaskWallet,
   coinbaseWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [

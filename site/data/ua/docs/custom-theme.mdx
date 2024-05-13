@@ -14,7 +14,7 @@ description: Створення користувацької теми
 Хоча вбудовані теми забезпечують певний рівень налаштування, тип `Theme` надається для того, щоб ви могли визначити власні користувацькі теми з більш низькорівневим доступом до базових змінних теми.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 Потім об'єднайте вбудовану тему з токенами теми, які ви хочете змінити. У цьому прикладі я змінюю токен `accentColor`, щоб він відповідав акцентному кольору мого бренду.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

@@ -14,7 +14,7 @@ L'implémentation par défaut du `ConnectButton` affiche également un indicateu
 Pour utiliser cette fonctionnalité, activez d'abord l'option `showRecentTransactions` sur `RainbowKitProvider`.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 Les transactions peuvent ensuite être enregistrées avec RainbowKit en utilisant le crochet `useAddRecentTransaction`.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ Une fois qu'une transaction a été enregistrée avec RainbowKit, son statut ser
 Par défaut, la transaction sera considérée comme terminée une fois qu'un seul bloc aura été miné sur le bloc dans lequel la transaction a été minée, mais cela peut être configuré en spécifiant une valeur `confirmations` personnalisée.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

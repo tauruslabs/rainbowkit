@@ -12,10 +12,10 @@ This package is designed to be installed independent of [RainbowKit](https://www
 
 ### Install
 
-Install the `@rainbow-me/rainbow-button` package and its peer dependencies, [wagmi](https://wagmi.sh/), [viem](https://viem.sh/), and [@tanstack/react-query](https://tanstack.com/query/v5).
+Install the `@merkletrade/rainbow-button` package and its peer dependencies, [wagmi](https://wagmi.sh/), [viem](https://viem.sh/), and [@tanstack/react-query](https://tanstack.com/query/v5).
 
 ```bash
-npm install @rainbow-me/rainbow-button wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbow-button wagmi viem@2.x @tanstack/react-query
 ```
 
 ### Import
@@ -23,11 +23,11 @@ npm install @rainbow-me/rainbow-button wagmi viem@2.x @tanstack/react-query
 Import Rainbow Button and wagmi.
 
 ```tsx
-import '@rainbow-me/rainbow-button/styles.css';
+import '@merkletrade/rainbow-button/styles.css';
 import {
   RainbowConnector,
   RainbowButtonProvider,
-} from '@rainbow-me/rainbow-button';
+} from '@merkletrade/rainbow-button';
 ...
 import { createConfig, WagmiConfig } from 'wagmi';
 ```
@@ -68,7 +68,7 @@ const App = () => {
 Then, in your app, import and render the `RainbowButton` component.
 
 ```tsx
-import { RainbowButton } from '@rainbow-me/rainbow-button';
+import { RainbowButton } from '@merkletrade/rainbow-button';
 
 export const YourApp = () => {
   return <RainbowButton/>;
@@ -102,7 +102,7 @@ The `RainbowButton.Custom` component is available for custom button implementati
 ## Try it out
 
 You can use the CodeSandbox links below try out the Rainbow Button:
-- [with Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-rainbow-button)
+- [with Next.js](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-rainbow-button)
 
 ## Contributing
 

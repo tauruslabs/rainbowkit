@@ -13,7 +13,7 @@ Taşımak için aşağıdaki adımları takip edin.
 **1. RainbowKit, `wagmi` ve `viem`'ı en son sürümlerine yükseltin**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 **2. `@tanstack/react-query` eş bağımlılığını yükleyin**
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. RainbowKit ve Wagmi yapılandırmalarınızı güncelleyin**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ Artık `<RainbowKitProvider>` için `chains` geçmenize gerek yok.
 Wagmi v2 ile uyumlu olarak `Chain` tipi değişmiştir ve RainbowKit'in `iconUrl` ve `iconBackground` meta verilerini desteklemeye devam etmektedir.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 `createConfig` ile örnek:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ RainbowKit cüzdan bağlayıcıları, Wagmi v2'yi desteklemek için önemli değ
 
 Cüzdan bağlayıcıları artık `rdns` özelliği ile EIP-6963 standardını da desteklemektedir. Cüzdan listesinde EIP-6963 destekli cüzdanlara yönelik yinelenen referansları önlemek için bunun doldurulduğundan emin olun.
 
-> Lütfen herhangi bir sorun bildirimi veya geri bildirim için RainbowKit v2'yi GitHub [burada](https://github.com/rainbow-me/rainbowkit/issues/new/choose) rapor edin.
+> Lütfen herhangi bir sorun bildirimi veya geri bildirim için RainbowKit v2'yi GitHub [burada](https://github.com/merkletrade/rainbowkit/issues/new/choose) rapor edin.

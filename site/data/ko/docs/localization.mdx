@@ -14,7 +14,7 @@ description: 기본 제공 번역을 사용하여 dApp의 언어 사용자 정�
 사용자에게 언어를 지정하려면, `RainbowKitProvider`에 `locale="zh-CN"`을 prop로 추가하면 됩니다.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider locale="zh-CN" {...etc}>
@@ -42,7 +42,7 @@ RainbowKit의 지역화 지원은 [하위 경로 라우팅](https://nextjs.org/d
 그런 다음 Pages Router에서 제공하는 `locale`을 `RainbowKitProvider`에 전달하십시오.
 
 ```tsx
-import { RainbowKitProvider, Locale } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Locale } from '@merkletrade/rainbowkit';
 
 export const App = () => {
   const { locale } = useRouter() as { locale: Locale };
@@ -54,9 +54,9 @@ export const App = () => {
 };
 ```
 
-Pages Router를 위한 예를 참조하실 수 있습니다 [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next).
+Pages Router를 위한 예를 참조하실 수 있습니다 [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next).
 
-App Router는 아직 i18n을 지원하지 않습니다. [`next-intl`](https://github.com/amannn/next-intl) 미들웨어를 사용한 구현의 최상의 사례를 위한 별도의 예제를 참조하십시오 [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next-app-i18n).
+App Router는 아직 i18n을 지원하지 않습니다. [`next-intl`](https://github.com/amannn/next-intl) 미들웨어를 사용한 구현의 최상의 사례를 위한 별도의 예제를 참조하십시오 [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next-app-i18n).
 
 전체 지역화 지원을 위해 여러분의 dApp의 콘텐츠를 번역하기 위해 같은 기법을 사용하는 것이 추천됩니다. [`i18n-js`](https://github.com/fnando/i18n) 및 [`next-intl`](https://github.com/amannn/next-intl)과 같은 지역화 라이브러리 및 Crowdin과 같은 관리 도구를 사용하면 이 과정을 단순화할 수 있습니다.
 
@@ -89,4 +89,4 @@ App Router는 아직 i18n을 지원하지 않습니다. [`next-intl`](https://gi
   ]}
 />
 
-추가적인 언어를 지원하려면 [GitHub Discussion](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas)을 열어 주시면 가능한 빨리 지원하도록 노력하겠습니다.
+추가적인 언어를 지원하려면 [GitHub Discussion](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas)을 열어 주시면 가능한 빨리 지원하도록 노력하겠습니다.

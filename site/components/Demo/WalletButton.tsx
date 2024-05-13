@@ -2,7 +2,7 @@ import {
   Locale,
   RainbowKitProvider,
   WalletButton as RKWalletButton,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { Box } from 'components/Box/Box';
 import { useRouter } from 'next/router';
 import React from 'react';

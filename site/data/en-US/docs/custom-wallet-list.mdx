@@ -7,16 +7,16 @@ description: Customizing the wallet list
 
 ## Customizing the wallet list
 
-You can import individual wallets from `'@rainbow-me/rainbowkit/wallets'` along with the `connectorsForWallets` function to build your own list of wallets with their necessary connectors. This way you have full control over which wallets to display, and in which order.
+You can import individual wallets from `'@merkletrade/rainbowkit/wallets'` along with the `connectorsForWallets` function to build your own list of wallets with their necessary connectors. This way you have full control over which wallets to display, and in which order.
 
 For example, you can choose to only show Rainbow along with generic fallback wallets.
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -35,7 +35,7 @@ const connectors = connectorsForWallets(
 You can then pass your connectors to Wagmi's `createConfig`.
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import { createConfig } from 'wagmi';
 
 const connectors = connectorsForWallets(/* ... */);
@@ -73,7 +73,7 @@ This is a fallback wallet option designed for WalletConnect-based wallets that h
 **It's recommended that you always include this wallet in the list to ensure all WalletConnect-based wallets are supported.**
 
 ```tsx
-import { walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
+import { walletConnectWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 ##### Injected Wallet
@@ -83,7 +83,7 @@ This is a fallback wallet option designed for scenarios where `window.ethereum` 
 **It's recommended that you always include this wallet in the list to ensure all injected wallets are supported.**
 
 ```tsx
-import { injectedWallet } from '@rainbow-me/rainbowkit/wallets';
+import { injectedWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 ##### Safe Wallet
@@ -91,7 +91,7 @@ import { injectedWallet } from '@rainbow-me/rainbowkit/wallets';
 For dApps that support Safe Apps to allow users to easily connect with their Safe vault or multi-sig, include the `safeWallet` option for automatic connections. The Safe option will only appear in the Safe Wallet browser environment.
 
 ```tsx
-import { safeWallet } from '@rainbow-me/rainbowkit/wallets';
+import { safeWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 ### Specific Wallets
@@ -101,259 +101,259 @@ The following wallets are provided via the `wallet` object (in alphabetical orde
 #### Argent
 
 ```tsx
-import { argentWallet } from '@rainbow-me/rainbowkit/wallets';
+import { argentWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bitget
 
 ```tsx
-import { bitgetWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bitgetWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bifrost Wallet
 
 ```tsx
-import { bifrostWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bifrostWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bitski
 
 ```tsx
-import { bitskiWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bitskiWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bitverse
 
 ```tsx
-import { bitverseWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bitverseWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bloom Wallet
 
 ```tsx
-import { bloomWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bloomWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Bybit Wallet
 
 ```tsx
-import { bybitWallet } from '@rainbow-me/rainbowkit/wallets';
+import { bybitWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Brave Wallet
 
 ```tsx
-import { braveWallet } from '@rainbow-me/rainbowkit/wallets';
+import { braveWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Coinbase Wallet
 
 ```tsx
-import { coinbaseWallet } from '@rainbow-me/rainbowkit/wallets';
+import { coinbaseWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Compass Wallet
 
 ```tsx
-import { compassWallet } from '@rainbow-me/rainbowkit/compassWallet';
+import { compassWallet } from '@merkletrade/rainbowkit/compassWallet';
 ```
 
 #### Coin98 Wallet
 
 ```tsx
-import { coin98Wallet } from '@rainbow-me/rainbowkit/wallets';
+import { coin98Wallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Core
 
 ```tsx
-import { coreWallet } from '@rainbow-me/rainbowkit/wallets';
+import { coreWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Dawn Wallet
 
 ```tsx
-import { dawnWallet } from '@rainbow-me/rainbowkit/wallets';
+import { dawnWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Enkrypt Wallet
 
 ```tsx
-import { enkryptWallet } from '@rainbow-me/rainbowkit/wallets';
+import { enkryptWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### FoxWallet
 
 ```tsx
-import { foxWallet } from '@rainbow-me/rainbowkit/wallets';
+import { foxWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Frame Wallet
 
 ```tsx
-import { frameWallet } from '@rainbow-me/rainbowkit/wallets';
+import { frameWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Frontier Wallet
 
 ```tsx
-import { frontierWallet } from '@rainbow-me/rainbowkit/wallets';
+import { frontierWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Gate Wallet
 
 ```tsx
-import { gateWallet } from '@rainbow-me/rainbowkit/wallets';
+import { gateWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Ledger Live
 
 ```tsx
-import { ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
+import { ledgerWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### imToken
 
 ```tsx
-import { imTokenWallet } from '@rainbow-me/rainbowkit/wallets';
+import { imTokenWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Kraken Wallet
 
 ```tsx
-import { krakenWallet } from '@rainbow-me/rainbowkit/wallets';
+import { krakenWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Kresus Wallet
 
 ```tsx
-import { kresusWallet } from '@rainbow-me/rainbowkit/wallets';
+import { kresusWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Kaikas
  
 ```tsx 
-import { kaikasWallet } from '@rainbow-me/rainbowkit/wallets';
+import { kaikasWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### MetaMask
 
 ```tsx
-import { metaMaskWallet } from '@rainbow-me/rainbowkit/wallets';
+import { metaMaskWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### MEW Wallet
 
 ```tsx
-import { mewWallet } from '@rainbow-me/rainbowkit/wallets';
+import { mewWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### OKX Wallet
 
 ```tsx
-import { okxWallet } from '@rainbow-me/rainbowkit/wallets';
+import { okxWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Omni
 
 ```tsx
-import { omniWallet } from '@rainbow-me/rainbowkit/wallets';
+import { omniWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### 1inch Wallet
 
 ```tsx
-import { oneInchWallet } from '@rainbow-me/rainbowkit/wallets';
+import { oneInchWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### OneKey
 
 ```tsx
-import { oneKeyWallet } from '@rainbow-me/rainbowkit/wallets';
+import { oneKeyWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Phantom
 
 ```tsx
-import { phantomWallet } from '@rainbow-me/rainbowkit/wallets';
+import { phantomWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Rabby Wallet
 
 ```tsx
-import { rabbyWallet } from '@rainbow-me/rainbowkit/wallets';
+import { rabbyWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Rainbow
 
 ```tsx
-import { rainbowWallet } from '@rainbow-me/rainbowkit/wallets';
+import { rainbowWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Ramper Wallet
 
 ```tsx
-import { ramperWallet } from '@rainbow-me/rainbowkit/wallets';
+import { ramperWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Ronin Wallet
 
 ```tsx
-import { roninWallet } from '@rainbow-me/rainbowkit/wallets';
+import { roninWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Safeheron
 
 ```tsx
-import { safeheronWallet } from '@rainbow-me/rainbowkit/wallets';
+import { safeheronWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Taho
 
 ```tsx
-import { tahoWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tahoWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Talisman
 
 ```tsx
-import { talismanWallet } from '@rainbow-me/rainbowkit/wallets';
+import { talismanWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Tokenary
 
 ```tsx
-import { tokenaryWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tokenaryWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### TokenPocket
 
 ```tsx
-import { tokenPocketWallet } from '@rainbow-me/rainbowkit/wallets';
+import { tokenPocketWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Trust Wallet
 
 ```tsx
-import { trustWallet } from '@rainbow-me/rainbowkit/wallets';
+import { trustWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Uniswap Wallet
 
 ```tsx
-import { uniswapWallet } from '@rainbow-me/rainbowkit/wallets';
+import { uniswapWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### XDEFI Wallet
 
 ```tsx
-import { xdefiWallet } from '@rainbow-me/rainbowkit/wallets';
+import { xdefiWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 #### Zerion
 
 ```tsx
-import { zerionWallet } from '@rainbow-me/rainbowkit/wallets';
+import { zerionWallet } from '@merkletrade/rainbowkit/wallets';
 ```
 
 ### Examples
@@ -365,11 +365,11 @@ Here are a few examples of displaying different wallets, in different order.
 Show MetaMask along with generic fallback wallets.
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   metaMaskWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -385,13 +385,13 @@ const connectors = connectorsForWallets(
 Show Rainbow, MetaMask and Coinbase along with generic fallback wallets.
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   metaMaskWallet,
   coinbaseWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [
@@ -418,13 +418,13 @@ You can use the `groupName` key to name different wallet groups. This is useful 
 Recommend Rainbow and MetaMask, but also offer Coinbase along with generic fallback wallets.
 
 ```tsx
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from '@merkletrade/rainbowkit';
 import {
   rainbowWallet,
   metaMaskWallet,
   coinbaseWallet,
   walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 const connectors = connectorsForWallets(
   [

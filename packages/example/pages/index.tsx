@@ -1,4 +1,4 @@
-import { RainbowButton } from '@rainbow-me/rainbow-button';
+import { RainbowButton } from '@merkletrade/rainbow-button';
 import {
   ConnectButton,
   WalletButton,
@@ -6,7 +6,7 @@ import {
   useAddRecentTransaction,
   useChainModal,
   useConnectModal,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth';
 import { useSession } from 'next-auth/react';

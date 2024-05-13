@@ -6,12 +6,12 @@ import {
   getDefaultWallets,
   Locale,
   getDefaultConfig,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import {
   argentWallet,
   trustWallet,
   ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 import { WagmiProvider } from 'wagmi';
 import {
   arbitrum,

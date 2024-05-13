@@ -18,7 +18,7 @@ Existen 3 funciones de tema incorporadas:
 Una función de tema devuelve un objeto de tema. Puede pasar el objeto al prop `theme` del `RainbowKitProvider`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider theme={darkTheme()} {...etc}>
@@ -30,7 +30,7 @@ export const App = () => (
 Si lo desea, puede pasar en `accentColor`, `accentColorForeground`, `borderRadius`, `fontStack` y `overlayBlur` para personalizarlos.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider
@@ -101,7 +101,7 @@ Las funciones de tema incorporadas también aceptan un objeto de opciones, permi
 Por ejemplo, para personalizar el tema oscuro con un color de acento morado y una escala de radio de borde `medium`:
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -122,7 +122,7 @@ const App = () => {
 Cada tema también proporciona varios preajustes de color de acento (`blue`, `green`, `orange`, `pink`, `purple`, `red`) que se pueden integrar en el objeto de opciones. Por ejemplo, para usar el preset de color de acento `rosado`:
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -147,7 +147,7 @@ Aquí hay varias formas en las que puedes usar la propiedad `tema`.
 Use el tema `temaOscuro`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider theme={darkTheme()} {...etc}>
@@ -162,7 +162,7 @@ Use el tema `temaMedianoche`.
 import {
   RainbowKitProvider,
   midnightTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider theme={midnightTheme()} {...etc}>
@@ -178,7 +178,7 @@ Aquí hay varias formas en las que puedes usar la configuración `colorDeAcento`
 Establezca el color de acento en un valor personalizado de púrpura.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -198,7 +198,7 @@ const App = () => {
 Establezca el color de acento en el preset `verde` incorporado.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -221,7 +221,7 @@ Aquí hay varias formas en las que puedes usar la configuración `radioDeBorde`.
 Establezca el radio del borde en `medio`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -240,7 +240,7 @@ const App = () => {
 Establezca el radio del borde en `ninguno`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -265,7 +265,7 @@ Por defecto, la `fontStack` está configurada a `rounded`. Pero aquí está cóm
 Establece la pila de fuentes a `system`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -288,7 +288,7 @@ Por defecto, el `overlayBlur` está configurado a `none`. Pero aquí está cómo
 Establece el desenfoque de superposición a `small`.
 
 ```tsx
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -314,7 +314,7 @@ Aquí hay algunas distintas formas en las que puedes utilizar diferentes temas, 
 - Establece la pila de fuentes en `system`
 
 ```tsx
-import { RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, lightTheme } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -342,7 +342,7 @@ const App = () => {
 import {
   RainbowKitProvider,
   midnightTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -369,7 +369,7 @@ import {
   RainbowKitProvider,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => (
   <RainbowKitProvider

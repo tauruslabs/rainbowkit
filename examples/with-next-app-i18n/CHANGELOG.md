@@ -6,7 +6,7 @@
 
 - Updated dependencies [af4ea4e]
 - Updated dependencies [f0b3b25]
-  - @rainbow-me/rainbowkit@2.0.7
+  - @merkletrade/rainbowkit@2.0.7
 
 ## 0.0.34
 
@@ -14,7 +14,7 @@
 
 - Updated dependencies [7ab6e50]
 - Updated dependencies [515498f]
-  - @rainbow-me/rainbowkit@2.0.6
+  - @merkletrade/rainbowkit@2.0.6
 
 ## 0.0.33
 
@@ -26,7 +26,7 @@
 - Updated dependencies [b11118f]
 - Updated dependencies [4dd1e45]
 - Updated dependencies [ec41346]
-  - @rainbow-me/rainbowkit@2.0.5
+  - @merkletrade/rainbowkit@2.0.5
 
 ## 0.0.32
 
@@ -36,7 +36,7 @@
 - Updated dependencies [6c240ba]
 - Updated dependencies [34419b5]
 - Updated dependencies [5c60239]
-  - @rainbow-me/rainbowkit@2.0.4
+  - @merkletrade/rainbowkit@2.0.4
 
 ## 0.0.31
 
@@ -50,7 +50,7 @@
 - Updated dependencies [b80e8fa]
 - Updated dependencies [985b80b]
 - Updated dependencies [b25db9a]
-  - @rainbow-me/rainbowkit@2.0.3
+  - @merkletrade/rainbowkit@2.0.3
 
 ## 0.0.30
 
@@ -68,7 +68,7 @@
 - Updated dependencies [2f637e4]
 - Updated dependencies [c021746]
 - Updated dependencies [df572f1]
-  - @rainbow-me/rainbowkit@2.0.2
+  - @merkletrade/rainbowkit@2.0.2
 
 ## 0.0.29
 
@@ -85,28 +85,28 @@
 - Updated dependencies [f69c0e1]
 - Updated dependencies [bb56562]
 - Updated dependencies [1a08977]
-  - @rainbow-me/rainbowkit@2.0.1
+  - @merkletrade/rainbowkit@2.0.1
 
 ## 0.0.28
 
 ### Patch Changes
 
 - Updated dependencies [aa0269e]
-  - @rainbow-me/rainbowkit@2.0.0
+  - @merkletrade/rainbowkit@2.0.0
 
 ## 0.0.27
 
 ### Patch Changes
 
 - Updated dependencies [33a8266]
-  - @rainbow-me/rainbowkit@1.3.6
+  - @merkletrade/rainbowkit@1.3.6
 
 ## 0.0.26
 
 ### Patch Changes
 
 - Updated dependencies [2b0c7b3]
-  - @rainbow-me/rainbowkit@1.3.5
+  - @merkletrade/rainbowkit@1.3.5
 
 ## 0.0.25
 
@@ -118,7 +118,7 @@
 - Updated dependencies [e5f5f03]
 - Updated dependencies [c0bd68e]
 - Updated dependencies [a79609b]
-  - @rainbow-me/rainbowkit@1.3.4
+  - @merkletrade/rainbowkit@1.3.4
 
 ## 0.0.24
 
@@ -127,14 +127,14 @@
 - Updated dependencies [24b5a88]
 - Updated dependencies [7565fb2]
 - Updated dependencies [5a184e9]
-  - @rainbow-me/rainbowkit@1.3.3
+  - @merkletrade/rainbowkit@1.3.3
 
 ## 0.0.23
 
 ### Patch Changes
 
 - Updated dependencies [7ba94f48]
-  - @rainbow-me/rainbowkit@1.3.2
+  - @merkletrade/rainbowkit@1.3.2
 
 ## 0.0.22
 
@@ -143,14 +143,14 @@
 - Updated dependencies [3feab0e6]
 - Updated dependencies [c9a8e469]
 - Updated dependencies [dba51779]
-  - @rainbow-me/rainbowkit@1.3.1
+  - @merkletrade/rainbowkit@1.3.1
 
 ## 0.0.21
 
 ### Patch Changes
 
 - Updated dependencies [9ce75a65]
-  - @rainbow-me/rainbowkit@1.3.0
+  - @merkletrade/rainbowkit@1.3.0
 
 ## 0.0.20
 
@@ -159,14 +159,14 @@
 - Updated dependencies [74ead9df]
 - Updated dependencies [94dce820]
 - Updated dependencies [39d81e93]
-  - @rainbow-me/rainbowkit@1.2.1
+  - @merkletrade/rainbowkit@1.2.1
 
 ## 0.0.19
 
 ### Patch Changes
 
 - Updated dependencies [ef64a229]
-  - @rainbow-me/rainbowkit@1.2.0
+  - @merkletrade/rainbowkit@1.2.0
 
 ## 0.0.18
 
@@ -175,7 +175,7 @@
 - Updated dependencies [9f68c300]
 - Updated dependencies [3f595c12]
 - Updated dependencies [e2075b31]
-  - @rainbow-me/rainbowkit@1.1.4
+  - @merkletrade/rainbowkit@1.1.4
 
 ## 0.0.17
 
@@ -187,7 +187,7 @@
 - Updated dependencies [2c8abbb2]
 - Updated dependencies [e41103fb]
 - Updated dependencies [b0022aea]
-  - @rainbow-me/rainbowkit@1.1.3
+  - @merkletrade/rainbowkit@1.1.3
 
 ## 0.0.16
 
@@ -196,21 +196,21 @@
 - Updated dependencies [6cbd9a57]
 - Updated dependencies [7d978605]
 - Updated dependencies [b2b69dcd]
-  - @rainbow-me/rainbowkit@1.1.2
+  - @merkletrade/rainbowkit@1.1.2
 
 ## 0.0.15
 
 ### Patch Changes
 
 - Updated dependencies [b60e335c]
-  - @rainbow-me/rainbowkit@1.1.1
+  - @merkletrade/rainbowkit@1.1.1
 
 ## 0.0.14
 
 ### Patch Changes
 
 - Updated dependencies [b37f5d68]
-  - @rainbow-me/rainbowkit@1.1.0
+  - @merkletrade/rainbowkit@1.1.0
 
 ## 0.0.1
 
@@ -220,4 +220,4 @@
 - Updated dependencies [fb9405a4]
 - Updated dependencies [7643e706]
 - Updated dependencies [252f02e8]
-  - @rainbow-me/rainbowkit@1.0.12
+  - @merkletrade/rainbowkit@1.0.12

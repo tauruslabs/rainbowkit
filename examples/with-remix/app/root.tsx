@@ -19,7 +19,7 @@ import {
   RainbowKitProvider,
   ConnectButton,
   getDefaultConfig,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import type { Chain } from 'wagmi/chains';
 import {
@@ -32,7 +32,7 @@ import {
 } from 'wagmi/chains';
 
 import globalStylesUrl from './styles/global.css';
-import rainbowStylesUrl from '@rainbow-me/rainbowkit/styles.css';
+import rainbowStylesUrl from '@merkletrade/rainbowkit/styles.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type Env = { PUBLIC_ENABLE_TESTNETS?: string };

@@ -1,11 +1,11 @@
 import './polyfills';
 import './global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig, RainbowKitProvider } from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import { arbitrum, base, mainnet, optimism, polygon } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

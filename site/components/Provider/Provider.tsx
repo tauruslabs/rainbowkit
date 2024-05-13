@@ -1,11 +1,11 @@
-import { getDefaultConfig, getDefaultWallets } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig, getDefaultWallets } from '@merkletrade/rainbowkit';
 import {
   argentWallet,
   imTokenWallet,
   ledgerWallet,
   omniWallet,
   trustWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 import { http, WagmiProvider } from 'wagmi';

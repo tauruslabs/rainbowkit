@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 import type { NextPage } from 'next';
 import {
   useAccount,

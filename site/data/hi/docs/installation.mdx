@@ -12,11 +12,11 @@ description: RainbowKit के साथ उपयोग करना शुर�
 आप निम्नलिखित कमांडों में से किसी एक का उपयोग करके, अपने पैकेज मैनेजर की पसंद के साथ, एक नया RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) ऐप का ढांचा तैयार कर सकते हैं:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 यह आपसे किसी परियोजना का नाम पूछेगा, एक नई डायरेक्टरी बनाएगा जिसमें आधिकारिक परियोजना होगी, और सभी आवश्यक निर्भरताओं को स्थापित करेगा।
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 RainbowKit और इसके समकक्ष निर्भरताओं, [wagmi](https://wagmi.sh/), [viem](https://viem.sh), और [@tanstack/react-query](https://tanstack.com/query/v5) को इंस्टॉल करें।
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > नोट: RainbowKit एक [React](https://reactjs.org/) पुस्तकालय है।
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 RainbowKit, Wagmi और TanStack Query को इम्पोर्ट करें।
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 फिर, आपके ऐप में, `ConnectButton` कौम्पोनॅन्ट को आयात करें और रेंडर करें।
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ Next.js और Create React App द्वारा प्रयोग किय�
 
 RainbowKit के पिछले संस्करणों में जो [ethers](https://docs.ethers.org/v5/) पर निर्भर थे, `fs`, `net`, और `tls` मॉड्यूल्स स्वतः polyfilled होते थे। RainbowKit v1 + wagmi v1 के साथ जो [viem](https://viem.sh/) पर बनाया गया है, यह मामला अब नहीं है।
 
-हमारे [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js), और [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) नमूनों की संदर्भ लें अपने प्रोजेक्ट के configuration guidance के लिए।
+हमारे [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js), और [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) नमूनों की संदर्भ लें अपने प्रोजेक्ट के configuration guidance के लिए।
 
 ##### Vite
 
-[Vite](https://vitejs.dev) bundler भी Node polyfills प्रदान नहीं करता, इसलिए आपको `global`, `Buffer` और `process.env` के लिए polyfills शामिल करने होंगे। उदाहरण के तौर पर, आप हमारे नमूना Vite प्रोजेक्ट में [polyfills का संदर्भ ले सकते हैं](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)।
+[Vite](https://vitejs.dev) bundler भी Node polyfills प्रदान नहीं करता, इसलिए आपको `global`, `Buffer` और `process.env` के लिए polyfills शामिल करने होंगे। उदाहरण के तौर पर, आप हमारे नमूना Vite प्रोजेक्ट में [polyfills का संदर्भ ले सकते हैं](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)।
 
 ##### Remix
 
 जब आप [Remix](https://remix.run) का उपयोग कर रहे होते हैं, तो सभी RainbowKit पैकेज प्रवेश बिंदुओं को आपके [सर्वर डिपेंडेंसीज](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) की सूची में आपके Remix कॉन्फ़िग में जोड़ा जाना चाहिए क्योंकि वे ESM पैकेजों के रूप में प्रकाशित किए जाते हैं।
 
-Remix भी आपको `global`, `Buffer` और `process.env` के लिए polyfill करने की आवश्यकता है। हमारे नमूना Remix प्रोजेक्ट में [polyfills का संदर्भ लें](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)।
+Remix भी आपको `global`, `Buffer` और `process.env` के लिए polyfill करने की आवश्यकता है। हमारे नमूना Remix प्रोजेक्ट में [polyfills का संदर्भ लें](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)।
 
 ```js
 /**
@@ -139,8 +139,8 @@ Remix भी आपको `global`, `Buffer` और `process.env` के लि�
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ module.exports = {
 
 ### आगे के उदाहरण
 
-RainbowKit के कुछ चलते हुए उदाहरण देखने के लिए, या उनका उपयोग नई परियोजना को स्वचालित रूप से خाका बनाने के लिए करें, [औपचारिक उदाहरण](https://github.com/rainbow-me/rainbowkit/tree/main/examples) देखें।
+RainbowKit के कुछ चलते हुए उदाहरण देखने के लिए, या उनका उपयोग नई परियोजना को स्वचालित रूप से خाका बनाने के लिए करें, [औपचारिक उदाहरण](https://github.com/merkletrade/rainbowkit/tree/main/examples) देखें।
 
 RainbowKit को सीधे अपने ब्राउज़र में आज़माने के लिए, नीचे दिए गए CodeSandbox लिंक्स देखें:
 
-- [Create React App] के साथ(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- [Next.js]के साथ  (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- [Next.js App Router] के साथ(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- [Remix]के साथ  (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- [Vite]के साथ  (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- [Create React App] के साथ(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- [Next.js]के साथ  (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- [Next.js App Router] के साथ(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- [Remix]के साथ  (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- [Vite]के साथ  (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)

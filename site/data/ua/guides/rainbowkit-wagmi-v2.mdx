@@ -13,7 +13,7 @@ image: guide-rainbowkit-v2.png
 **1. Оновіть RainbowKit, `wagmi` та `viem` до останніх версій**
 
 ```bash
-npm i @rainbow-me/rainbowkit wagmi viem@2.x
+npm i @merkletrade/rainbowkit wagmi viem@2.x
 ```
 
 \*\*2. Встановіть залежність `@tanstack/react-query`
@@ -29,7 +29,7 @@ npm i @tanstack/react-query
 **3. Оновіть ваші конфігурації RainbowKit та Wagmi**
 
 ```diff
-  import '@rainbow-me/rainbowkit/styles.css'
+  import '@merkletrade/rainbowkit/styles.css'
 
 + import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 - import { createPublicClient, http } from 'viem'
@@ -37,9 +37,9 @@ npm i @tanstack/react-query
 + import { WagmiProvider, http } from 'wagmi'
 - import { configureChains, createConfig } from 'wagmi'
   import { mainnet } from 'wagmi/chains'
-  import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-- import { getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit'
-+ import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+  import { RainbowKitProvider } from '@merkletrade/rainbowkit'
+- import { getDefaultWallets, connectorsForWallets } from '@merkletrade/rainbowkit'
++ import { getDefaultConfig } from '@merkletrade/rainbowkit'
 
   /* getDefaultWallets is now optional */
 - const { wallets } = getDefaultWallets({
@@ -136,7 +136,7 @@ const config = getDefaultConfig({
 Тип `Chain` змінений у відповідності до Wagmi v2 та продовжує підтримувати метадані RainbowKit `iconUrl` та `iconBackground`.
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 
   const avalanche = {
     id: 43_114,
@@ -177,7 +177,7 @@ const config = getDefaultConfig({
 Приклад з `createConfig`:
 
 ```diff
-+ import { Chain } from '@rainbow-me/rainbowkit'
++ import { Chain } from '@merkletrade/rainbowkit'
 + const chains: readonly [Chain, ...Chain[]] = [
 +   {
 +     ...mainnet,
@@ -199,4 +199,4 @@ const config = getDefaultConfig({
 
 Конектори гаманців тепер також підтримують стандарт EIP-6963 за допомогою властивості `rdns`. Переконайтеся, що вона заповнена, щоб запобігти дублюванню посилань на гаманці, що підтримують EIP-6963, у вашому списку гаманців.
 
-> Будь ласка, повідомте про будь-які проблеми чи відгуки для RainbowKit v2 на GitHub [тут](https://github.com/rainbow-me/rainbowkit/issues/new/choose).
+> Будь ласка, повідомте про будь-які проблеми чи відгуки для RainbowKit v2 на GitHub [тут](https://github.com/merkletrade/rainbowkit/issues/new/choose).

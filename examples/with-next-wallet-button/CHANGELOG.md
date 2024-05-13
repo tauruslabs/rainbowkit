@@ -6,7 +6,7 @@
 
 - Updated dependencies [af4ea4e]
 - Updated dependencies [f0b3b25]
-  - @rainbow-me/rainbowkit@2.0.7
+  - @merkletrade/rainbowkit@2.0.7
 
 ## 0.0.15
 
@@ -14,7 +14,7 @@
 
 - Updated dependencies [7ab6e50]
 - Updated dependencies [515498f]
-  - @rainbow-me/rainbowkit@2.0.6
+  - @merkletrade/rainbowkit@2.0.6
 
 ## 0.0.14
 
@@ -26,7 +26,7 @@
 - Updated dependencies [b11118f]
 - Updated dependencies [4dd1e45]
 - Updated dependencies [ec41346]
-  - @rainbow-me/rainbowkit@2.0.5
+  - @merkletrade/rainbowkit@2.0.5
 
 ## 0.0.13
 
@@ -36,7 +36,7 @@
 - Updated dependencies [6c240ba]
 - Updated dependencies [34419b5]
 - Updated dependencies [5c60239]
-  - @rainbow-me/rainbowkit@2.0.4
+  - @merkletrade/rainbowkit@2.0.4
 
 ## 0.0.12
 
@@ -50,7 +50,7 @@
 - Updated dependencies [b80e8fa]
 - Updated dependencies [985b80b]
 - Updated dependencies [b25db9a]
-  - @rainbow-me/rainbowkit@2.0.3
+  - @merkletrade/rainbowkit@2.0.3
 
 ## 0.0.11
 
@@ -67,7 +67,7 @@
 - Updated dependencies [2f637e4]
 - Updated dependencies [c021746]
 - Updated dependencies [df572f1]
-  - @rainbow-me/rainbowkit@2.0.2
+  - @merkletrade/rainbowkit@2.0.2
 
 ## 0.0.10
 
@@ -84,28 +84,28 @@
 - Updated dependencies [f69c0e1]
 - Updated dependencies [bb56562]
 - Updated dependencies [1a08977]
-  - @rainbow-me/rainbowkit@2.0.1
+  - @merkletrade/rainbowkit@2.0.1
 
 ## 0.0.9
 
 ### Patch Changes
 
 - Updated dependencies [aa0269e]
-  - @rainbow-me/rainbowkit@2.0.0
+  - @merkletrade/rainbowkit@2.0.0
 
 ## 0.0.8
 
 ### Patch Changes
 
 - Updated dependencies [33a8266]
-  - @rainbow-me/rainbowkit@1.3.6
+  - @merkletrade/rainbowkit@1.3.6
 
 ## 0.0.7
 
 ### Patch Changes
 
 - Updated dependencies [2b0c7b3]
-  - @rainbow-me/rainbowkit@1.3.5
+  - @merkletrade/rainbowkit@1.3.5
 
 ## 0.0.6
 
@@ -117,7 +117,7 @@
 - Updated dependencies [e5f5f03]
 - Updated dependencies [c0bd68e]
 - Updated dependencies [a79609b]
-  - @rainbow-me/rainbowkit@1.3.4
+  - @merkletrade/rainbowkit@1.3.4
 
 ## 0.0.5
 
@@ -126,14 +126,14 @@
 - Updated dependencies [24b5a88]
 - Updated dependencies [7565fb2]
 - Updated dependencies [5a184e9]
-  - @rainbow-me/rainbowkit@1.3.3
+  - @merkletrade/rainbowkit@1.3.3
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [7ba94f48]
-  - @rainbow-me/rainbowkit@1.3.2
+  - @merkletrade/rainbowkit@1.3.2
 
 ## 0.0.3
 
@@ -143,11 +143,11 @@
 - Updated dependencies [3feab0e6]
 - Updated dependencies [c9a8e469]
 - Updated dependencies [dba51779]
-  - @rainbow-me/rainbowkit@1.3.1
+  - @merkletrade/rainbowkit@1.3.1
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies [9ce75a65]
-  - @rainbow-me/rainbowkit@1.3.0
+  - @merkletrade/rainbowkit@1.3.0

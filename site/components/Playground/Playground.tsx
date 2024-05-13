@@ -1,4 +1,3 @@
-import * as RadioGroup from '@radix-ui/react-radio-group';
 import {
   Locale,
   RainbowKitProvider,
@@ -6,7 +5,8 @@ import {
   darkTheme,
   lightTheme,
   midnightTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
+import * as RadioGroup from '@radix-ui/react-radio-group';
 import clsx from 'clsx';
 import { Box } from 'components/Box/Box';
 import { MeshGradient } from 'components/MeshGradient/MeshGradient';

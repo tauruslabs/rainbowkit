@@ -7,7 +7,7 @@ description: Criar uma carteira personalizada
 
 ## Criar uma carteira personalizada
 
-> Nota: Esta API é instável e provavelmente mudará em um futuro próximo. Estaremos adicionando mais carteiras integradas ao longo do tempo. [Informe-nos](https://github.com/rainbow-me/rainbowkit/issues) se houver carteiras específicas que interessem a você.
+> Nota: Esta API é instável e provavelmente mudará em um futuro próximo. Estaremos adicionando mais carteiras integradas ao longo do tempo. [Informe-nos](https://github.com/merkletrade/rainbowkit/issues) se houver carteiras específicas que interessem a você.
 
 O tipo de função `Wallet` é fornecido para ajudá-lo a definir suas próprias carteiras personalizadas. As seguintes propriedades podem ser configuradas no valor de retorno da sua função `Wallet`:
 
@@ -209,7 +209,7 @@ O tipo de função `Wallet` é fornecido para ajudá-lo a definir suas próprias
 Por exemplo, para criar uma carteira personalizada usando WalletConnect:
 
 ```tsx
-import { Wallet, getWalletConnectConnector } from '@rainbow-me/rainbowkit';
+import { Wallet, getWalletConnectConnector } from '@merkletrade/rainbowkit';
 
 export interface MyWalletOptions {
   projectId: string;

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
-import { WalletButton } from "@rainbow-me/rainbowkit";
+import { WalletButton } from "@merkletrade/rainbowkit";
 
 const Home: NextPage = () => {
   const { isConnected } = useAccount();

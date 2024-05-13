@@ -1,4 +1,4 @@
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 import './global.css';
 
 import {
@@ -12,11 +12,11 @@ import {
   getDefaultWallets,
   lightTheme,
   midnightTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import {
   GetSiweMessageOptions,
   RainbowKitSiweNextAuthProvider,
-} from '@rainbow-me/rainbowkit-siwe-next-auth';
+} from '@merkletrade/rainbowkit-siwe-next-auth';
 import {
   argentWallet,
   bifrostWallet,
@@ -63,7 +63,7 @@ import {
   xdefiWallet,
   zealWallet,
   zerionWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+} from '@merkletrade/rainbowkit/wallets';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { Session } from 'next-auth';

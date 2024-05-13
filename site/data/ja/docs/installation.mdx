@@ -12,11 +12,11 @@ description: RainbowKitで始めてみましょう
 あなたの選択したパッケージマネージャで、以下のコマンドのいずれかを使用して、新しいRainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org)アプリを一から作成することができます。
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 これにより、プロジェクト名を求められ、新しいディレクトリが生成され、ボイラープレートプロジェクトが含まれ、必要な全ての依存関係がインストールされます。
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 RainbowKitおよびそのピア依存関係である[wagmi](https://wagmi.sh/)、[viem](https://viem.sh)、[@tanstack/react-query](https://tanstack.com/query/v5)をインストールしてください。
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > 注: RainbowKitは [React](https://reactjs.org/) ライブラリです。
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 RainbowKit、Wagmi、TanStack Queryをインポートします。
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 次に、あなたのアプリで、`ConnectButton` コンポーネントをインポートしてレンダリングします。
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ Next.jsとCreate React Appが使用する[Webpack v5](https://webpack.js.org/blo
 
 [ethers](https://docs.ethers.org/v5/)に依存していたRainbowKitの以前のバージョンでは、`fs`、`net`、そして`tls`モジュールが自動的にポリフィルされました。 これは、RainbowKit v1 + wagmi v1には当てはまらず、これらは [viem](https://viem.sh/)を基礎にして構築されています。 これは、RainbowKit v1 + wagmi v1には当てはまらず、これらは [viem](https://viem.sh/)を基礎にして構築されています。 これは、[viem](https://viem.sh/)をベースに構築されたRainbowKit v1 + wagmi v1ではもはや当てはまりません。
 
-[Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js)、[Next.jsアプリRouter Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js)、または[Create React Appのポリフィル](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts)サンプルを参考に、プロジェクトの設定ガイダンスを参照してください。
+[Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js)、[Next.jsアプリRouter Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js)、または[Create React Appのポリフィル](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts)サンプルを参考に、プロジェクトの設定ガイダンスを参照してください。
 
 ##### Vite
 
-[Vite](https://vitejs.dev)バンドラーはNode polyfillsを提供していないため、 `global`、 `Buffer`、 `process.env`のpolyfillsを含める必要があります。 例として、[私たちのサンプルViteプロジェクトのポリフィル](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。 例として、[私たちのサンプルViteプロジェクトのポリフィル](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。 例として、[サンプル Vite プロジェクトの polyfills](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。
+[Vite](https://vitejs.dev)バンドラーはNode polyfillsを提供していないため、 `global`、 `Buffer`、 `process.env`のpolyfillsを含める必要があります。 例として、[私たちのサンプルViteプロジェクトのポリフィル](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。 例として、[私たちのサンプルViteプロジェクトのポリフィル](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。 例として、[サンプル Vite プロジェクトの polyfills](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)を参照することができます。
 
 ##### Remix
 
 [Remix](https://remix.run)を使用する場合、全てのRainbowKitパッケージのエントリーポイントは、ESMパッケージとして公開されているため、Remixの設定の[サーバー依存関係](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages)のリストに追加する必要があります。
 
-Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 [サンプル Remix プロジェクトの polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)を参照してください。
+Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要もあります。 [サンプル Remix プロジェクトの polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)を参照してください。
 
 ```js
 /**
@@ -139,8 +139,8 @@ Remixでは、`global`、`Buffer`、`process.env`をポリフィルする必要�
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ wagmiの包括的なReactフックスを使用して、トランザクション�
 
 ### さらなる例
 
-RainbowKitの一部の実行例を見るため、またはそれらを使って新しいプロジェクトを自動的に生成するために、[公式の例](https://github.com/rainbow-me/rainbowkit/tree/main/examples)をご確認ください。
+RainbowKitの一部の実行例を見るため、またはそれらを使って新しいプロジェクトを自動的に生成するために、[公式の例](https://github.com/merkletrade/rainbowkit/tree/main/examples)をご確認ください。
 
 ブラウザで直接RainbowKitを試すためには、下記のCodeSandboxリンクをご覧ください:
 
-- [Create React App]を使用(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- [Next.js]を使用(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- [Next.js App Router]を使用(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- [Remix]を使用(https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- [Vite]を使用（https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite）
+- [Create React App]を使用(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- [Next.js]を使用(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- [Next.js App Router]を使用(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- [Remix]を使用(https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- [Vite]を使用（https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite）

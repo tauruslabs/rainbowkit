@@ -20,7 +20,7 @@ To learn more about this stack, take a look at the following resources:
 - [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
 - [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
 
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
+You can check out [the RainbowKit GitHub repository](https://github.com/merkletrade/rainbowkit) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 

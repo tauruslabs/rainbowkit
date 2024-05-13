@@ -1,12 +1,12 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbow-button/styles.css';
+import '@merkletrade/rainbow-button/styles.css';
 import type { AppProps } from 'next/app';
 import { createConfig, http, WagmiProvider } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import {
   RainbowButtonProvider,
   rainbowConnector,
-} from '@rainbow-me/rainbow-button';
+} from '@merkletrade/rainbow-button';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const config = createConfig({

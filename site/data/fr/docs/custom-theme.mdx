@@ -14,7 +14,7 @@ description: Création d'un thème personnalisé
 Alors que les thèmes intégrés offrent un certain niveau de personnalisation, le type `Theme` est fourni pour vous aider à définir vos propres thèmes personnalisés avec un accès de niveau inférieur aux variables de thème sous-jacentes.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from '@merkletrade/rainbowkit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -97,7 +97,7 @@ import {
   RainbowKitProvider,
   darkTheme,
   Theme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 ```
 
 Ensuite, fusionnez le thème intégré, avec les jetons de thème que vous aimeriez remplacer. Dans cet exemple, je remplace le jeton `accentColor` pour qu'il corresponde à la couleur d'accent de ma marque.
@@ -139,7 +139,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (

@@ -12,11 +12,11 @@ description: RainbowKit으로 시작하고 실행하기
 선택한 패키지 관리자를 사용하여 다음 명령 중 하나로 새로운 RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) 앱을 스캐폴드 할 수 있습니다:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 이것은 프로젝트 이름을 요청하고, 보일러플레이트 프로젝트가 포함된 새 디렉토리를 생성하고, 필요한 모든 종속성을 설치합니다.
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 RainbowKit 및 동료 의존성인 [wagmi](https://wagmi.sh/), [viem](https://viem.sh), 그리고 [@tanstack/react-query](https://tanstack.com/query/v5)를 설치하세요.
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > 참고: RainbowKit는 [React](https://reactjs.org/) 라이브러리입니다.
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 RainbowKit, Wagmi 및 TanStack Query를 가져오세요.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 그런 다음, 앱에서 `ConnectButton` 컴포넌트를 가져와서 렌더링합니다.
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ Next.js와 Create React App에 사용되는 [Webpack v5](https://webpack.js.org/
 
 [ethers](https://docs.ethers.org/v5/)에 의존하던 이전 버전의 RainbowKit에서는 `fs`, `net`, `tls` 모듈이 자동으로 polyfilled 되었습니다. 이는 RainbowKit v1 + wagmi v1에서는 더 이상 적용되지 않으며, 이들은 [viem](https://viem.sh/)를 기반으로 구축되었습니다.
 
-우리의 [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js), 및 [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) 샘플들을 참조하여 프로젝트에 대한 구성 가이드를 받을 수 있습니다.
+우리의 [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js), 및 [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) 샘플들을 참조하여 프로젝트에 대한 구성 가이드를 받을 수 있습니다.
 
 ##### Vite
 
-[Vite](https://vitejs.dev) 번들러는 Node polyfills을 제공하지 않으므로, `global`, `Buffer` 및 `process.env`에 대한 polyfills이 필요합니다. 예시로, [우리의 샘플 Vite 프로젝트의 polyfills](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)을 참조할 수 있습니다.
+[Vite](https://vitejs.dev) 번들러는 Node polyfills을 제공하지 않으므로, `global`, `Buffer` 및 `process.env`에 대한 polyfills이 필요합니다. 예시로, [우리의 샘플 Vite 프로젝트의 polyfills](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)을 참조할 수 있습니다.
 
 ##### Remix
 
 [Remix](https://remix.run)을 사용할 때, 모든 RainbowKit 패키지 엔트리 포인트는 ESM 패키지로 배포되므로 리믹스 구성에서 [서버 의존성](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) 목록에 추가해야 합니다.
 
-리믹스는 또한 `global`, `Buffer` 및 `process.env`에 대한 폴리필이 필요합니다. [샘플 Remix 프로젝트에서의 폴리필](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)을 참조하십시오.
+리믹스는 또한 `global`, `Buffer` 및 `process.env`에 대한 폴리필이 필요합니다. [샘플 Remix 프로젝트에서의 폴리필](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts)을 참조하십시오.
 
 ```js
 /**
@@ -139,8 +139,8 @@ Next.js와 Create React App에 사용되는 [Webpack v5](https://webpack.js.org/
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ wagmi의 포괄적인 React Hooks 세트를 이용하여 트랜잭션을 전송�
 
 ### 추가 예제
 
-RainbowKit의 실행 예제를 보거나, 심지어 새 프로젝트를 자동으로 스캐폴드하는 데 사용하려면, [공식 예제](https://github.com/rainbow-me/rainbowkit/tree/main/examples)를 확인하십시오.
+RainbowKit의 실행 예제를 보거나, 심지어 새 프로젝트를 자동으로 스캐폴드하는 데 사용하려면, [공식 예제](https://github.com/merkletrade/rainbowkit/tree/main/examples)를 확인하십시오.
 
 브라우저에서 RainbowKit를 직접 시도하기 위해 아래의 CodeSandbox 링크를 확인하십시오:
 
-- [리액트 앱 생성](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)을 사용하여
-- [Next.js]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- [Next.js 앱 라우터](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)을 사용하여
-- [Remix]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- [Vite]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- [리액트 앱 생성](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)을 사용하여
+- [Next.js]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- [Next.js 앱 라우터](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)을 사용하여
+- [Remix]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- [Vite]을(를) 사용하여 (https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)

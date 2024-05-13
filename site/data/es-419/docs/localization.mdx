@@ -14,7 +14,7 @@ Si está disponible, RainbowKit detectará el [idioma preferido](https://develop
 Para especificar un idioma para tus usuarios, solo añade `locale="zh-CN"` como una prop en tu `RainbowKitProvider`
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 export const App = () => (
   <RainbowKitProvider locale="zh-CN" {...etc}>
@@ -42,7 +42,7 @@ Configure su proyecto Next.js como el ejemplo a continuación para agregar un su
 Luego pase el `locale` proporcionado por el Pages Router al `RainbowKitProvider`
 
 ```tsx
-import { RainbowKitProvider, Locale } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Locale } from '@merkletrade/rainbowkit';
 
 export const App = () => {
   const { locale } = useRouter() as { locale: Locale };
@@ -54,9 +54,9 @@ export const App = () => {
 };
 ```
 
-Puede hacer referencia a un ejemplo para el Pages Router [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next).
+Puede hacer referencia a un ejemplo para el Pages Router [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next).
 
-App Router aún no admite i18n. Consulte nuestro ejemplo independiente [here](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-next-app-i18n) para las mejores prácticas de implementación con middleware [`next-intl`](https://github.com/amannn/next-intl).
+App Router aún no admite i18n. Consulte nuestro ejemplo independiente [here](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-next-app-i18n) para las mejores prácticas de implementación con middleware [`next-intl`](https://github.com/amannn/next-intl).
 
 Se recomienda que utilice las mismas técnicas para traducir el contenido de su dApp para un soporte de localización completo. Las bibliotecas de localización como [`i18n-js`](https://github.com/fnando/i18n) y [`next-intl`](https://github.com/amannn/next-intl) y herramientas de gestión como Crowdin simplificarán este proceso.
 
@@ -88,4 +88,4 @@ Ofrecemos soporte completo para las siguientes regiones `locale`:
   ]}
 />
 
-Si desea ver soporte para un idioma adicional, abra una [Discusión de GitHub](https://github.com/rainbow-me/rainbowkit/discussions/new?category=ideas) y trabajaremos para soportarlo lo antes posible.
+Si desea ver soporte para un idioma adicional, abra una [Discusión de GitHub](https://github.com/merkletrade/rainbowkit/discussions/new?category=ideas) y trabajaremos para soportarlo lo antes posible.

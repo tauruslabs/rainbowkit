@@ -1,10 +1,10 @@
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 import './polyfills';
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig, RainbowKitProvider } from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   arbitrum,

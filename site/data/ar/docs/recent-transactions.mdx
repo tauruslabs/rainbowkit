@@ -14,7 +14,7 @@ description: أظهر معاملاتك الأخيرة
 للاستفادة من هذه الميزة، قم أولاً بتمكين الخيار `showRecentTransactions` على `RainbowKitProvider`.
 
 ```tsx
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
 ثم يمكن تسجيل المعاملات مع RainbowKit باستخدام الخطاف `useAddRecentTransaction`.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();
@@ -53,7 +53,7 @@ export default () => {
 بشكل افتراضي، سيتم اعتبار الصفقة مكتملة بمجرد تعدين كتلة واحدة فوق الكتلة التي تم فيها تعدين الصفقة، لكن يمكن تكوين ذلك عن طريق تحديد قيمة `confirmations` مخصصة.
 
 ```tsx
-import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
+import { useAddRecentTransaction } from '@merkletrade/rainbowkit';
 
 export default () => {
   const addRecentTransaction = useAddRecentTransaction();

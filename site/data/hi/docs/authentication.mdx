@@ -17,10 +17,10 @@ description: अपने उपयोगकर्ताओं का प्र�
 
 #### स्थापित करें
 
-`@rainbow-me/rainbowkit-siwe-next-auth` पैकेज और इसके पीर डिपेंडेंसी, [ethers](https://docs.ethers.org/v5/) को इनस्टॉल करें।
+`@merkletrade/rainbowkit-siwe-next-auth` पैकेज और इसके पीर डिपेंडेंसी, [ethers](https://docs.ethers.org/v5/) को इनस्टॉल करें।
 
 ```bash
-npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
+npm install @merkletrade/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 ```
 
 > नोट: `siwe` को [ethers](https://docs.ethers.org/v5/) पीर डिपेंडेंसी की आवश्यकता होती है, जबकि [wagmi](https://wagmi.sh/) अब वैकल्पिक [viem](https://viem.sh) पर आधारित है।
@@ -30,14 +30,14 @@ npm install @rainbow-me/rainbowkit-siwe-next-auth siwe@^2 ethers@^5
 अपने `App` कौम्पोनॅन्ट में,  `RainbowKitSiweNextAuthProvider` आयात करें।
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
 ```
 
 `RainbowKitProvider` को `RainbowKitSiweNextAuthProvider` के साथ रैप करें, सुनिश्चित करें कि यह NextAuth के `SessionProvider` के अंदर नेस्टेड है ताकि इसे सत्र तक पहुंच हो।
 
 ```tsx
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth';
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { RainbowKitSiweNextAuthProvider } from '@merkletrade/rainbowkit-siwe-next-auth';
+import { RainbowKitProvider } from '@merkletrade/rainbowkit';
 import { SessionProvider } from 'next-auth/react';
 import type { Session } from 'next-auth';
 import { AppProps } from 'next/app';
@@ -83,7 +83,7 @@ export default function App({
 import {
   RainbowKitSiweNextAuthProvider,
   GetSiweMessageOptions,
-} from '@rainbow-me/rainbowkit-siwe-next-auth';
+} from '@merkletrade/rainbowkit-siwe-next-auth';
 
 const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   statement: 'Sign in to my RainbowKit app',

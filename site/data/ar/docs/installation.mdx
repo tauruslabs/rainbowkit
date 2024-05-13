@@ -12,11 +12,11 @@ description: ابدأ العمل مع RainbowKit
 يمكنك إعداد تطبيق RainbowKit جديد + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) باستخدام أحد الأوامر التالية، باستخدام مدير حزمة الخاص بك:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init @merkletrade/rainbowkit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create @merkletrade/rainbowkit@latest
 # or
-yarn create @rainbow-me/rainbowkit
+yarn create @merkletrade/rainbowkit
 ```
 
 سيطلب منك اسم المشروع، يولد دليل جديد يحتوي على مشروع قالب خام، ويثبت جميع الإعتماديات المطلوبة.
@@ -28,7 +28,7 @@ yarn create @rainbow-me/rainbowkit
 قم بتثبيت RainbowKit والتبعيات المصاحبة له، [wagmi](https://wagmi.sh/), [viem](https://viem.sh)، و [@tanstack/react-query](https://tanstack.com/query/v5).
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
+npm install @merkletrade/rainbowkit wagmi viem@2.x @tanstack/react-query
 ```
 
 > ملاحظة: تعتبر RainbowKit مكتبة لـ [React](https://reactjs.org/).
@@ -38,12 +38,12 @@ npm install @rainbow-me/rainbowkit wagmi viem@2.x @tanstack/react-query
 استورد RainbowKit، Wagmi و TanStack Query.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import '@merkletrade/rainbowkit/styles.css';
 
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from '@merkletrade/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
   mainnet,
@@ -67,7 +67,7 @@ import {
 
 ```tsx line=4-99
 ...
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from '@merkletrade/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -102,7 +102,7 @@ const App = () => {
 ثم، في تطبيقك، قم باستيراد وتقديم مكون `ConnectButton`.
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@merkletrade/rainbowkit';
 
 export const YourApp = () => {
   return <ConnectButton />;
@@ -121,17 +121,17 @@ export const YourApp = () => {
 
 في الإصدارات السابقة من RainbowKit التي اعتمدت على [ethers](https://docs.ethers.org/v5/)، تمت محاكاة الوحدات `fs`، `net`، و `tls` بشكل تلقائي. هذا لم يعد الحال مع RainbowKit v1 + wagmi v1، اللذان تم بناؤهما على [viem](https://viem.sh/).
 
-راجع مرجعنا [Next.js Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-next-app/next.config.js), و [Create React App polyfills](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) عينات للحصول على توجيهات لتكوين مشروعك.
+راجع مرجعنا [Next.js Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next/next.config.js), [Next.js App Router Webpack Config](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-next-app/next.config.js), و [Create React App polyfills](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-create-react-app/src/polyfills.ts) عينات للحصول على توجيهات لتكوين مشروعك.
 
 ##### Vite
 
-ال [Vite](https://vitejs.dev) لا يوفر Node polyfills، لذلك ستحتاج إلى تضمين ال polyfills لـ `global`, `Buffer` و `process.env`. كمثال، يمكنك الرجوع إلى [polyfills في مشروع Vite الذي نقدمه كعينة](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
+ال [Vite](https://vitejs.dev) لا يوفر Node polyfills، لذلك ستحتاج إلى تضمين ال polyfills لـ `global`, `Buffer` و `process.env`. كمثال، يمكنك الرجوع إلى [polyfills في مشروع Vite الذي نقدمه كعينة](https://github.com/merkletrade/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts).
 
 ##### Remix
 
 عند استخدام [Remix](https://remix.run)، يجب إضافة جميع نقاط دخول حزمة RainbowKit إلى قائمتك من [التبعيات الخادم](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) في تكوين Remix الخاص بك لأنها تم نشرها كحزم ESM.
 
-يتطلب Remix أيضًا أن تعبئ مُعالِجات `global`، `Buffer` و `process.env`. راجع [جزئيات التعبئة في مشروع Remix النموذجي](https://github.com/rainbow-me/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
+يتطلب Remix أيضًا أن تعبئ مُعالِجات `global`، `Buffer` و `process.env`. راجع [جزئيات التعبئة في مشروع Remix النموذجي](https://github.com/merkletrade/rainbowkit/blob/main/examples/with-remix/app/polyfills.ts).
 
 ```js
 /**
@@ -139,8 +139,8 @@ export const YourApp = () => {
  */
 module.exports = {
   serverDependencies: [
-    '@rainbow-me/rainbowkit',
-    '@rainbow-me/rainbowkit/wallets',
+    '@merkletrade/rainbowkit',
+    '@merkletrade/rainbowkit/wallets',
   ],
 };
 ```
@@ -155,12 +155,12 @@ module.exports = {
 
 ### مزيد من الأمثلة
 
-لرؤية بعض الأمثلة الجارية من RainbowKit، أو حتى استخدامها لبناء مشروع جديد تلقائيا، تحقق من [الأمثلة الرسمية](https://github.com/rainbow-me/rainbowkit/tree/main/examples).
+لرؤية بعض الأمثلة الجارية من RainbowKit، أو حتى استخدامها لبناء مشروع جديد تلقائيا، تحقق من [الأمثلة الرسمية](https://github.com/merkletrade/rainbowkit/tree/main/examples).
 
 لتجربة RainbowKit مباشرة في المتصفح الخاص بك، تحقق من روابط CodeSandbox أدناه:
 
-- مع [إنشاء تطبيق React](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-create-react-app)
-- مع [Next.js](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next)
-- مع [تطبيق Next.js للتوجيه](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-next-app)
-- مع [Remix](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-remix)
-- مع [Vite](https://codesandbox.io/p/sandbox/github/rainbow-me/rainbowkit/tree/main/examples/with-vite)
+- مع [إنشاء تطبيق React](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-create-react-app)
+- مع [Next.js](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next)
+- مع [تطبيق Next.js للتوجيه](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-next-app)
+- مع [Remix](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-remix)
+- مع [Vite](https://codesandbox.io/p/sandbox/github/merkletrade/rainbowkit/tree/main/examples/with-vite)
