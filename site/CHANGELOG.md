@@ -1,5 +1,33 @@
 # site
 
+## 0.0.103
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.5
+
+## 0.0.102
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.4
+
+## 0.0.101
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.3
+
+## 0.0.100
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.2
+
 ## 0.0.99
 
 ### Patch Changes

@@ -180,10 +180,10 @@ export function useWalletConnectors(
 
     const recent = isRecentWallet(recentWallets, wallet.id);
 
-    if (eip6963 || isAptosWallet) {
+    if (eip6963) {
       walletConnectors.push({
         ...wallet,
-        iconUrl: isAptosWallet ? wallet.iconUrl : wallet.icon!,
+        iconUrl: wallet.icon!,
         ready: true,
         connect: () => connectWallet(wallet),
         groupName: 'Installed',
@@ -193,28 +193,56 @@ export function useWalletConnectors(
       continue;
     }
 
-    walletConnectors.push({
-      ...wallet,
-      ready: wallet.installed ?? true,
-      connect: () => connectWallet(wallet),
-      desktopDownloadUrl: getDesktopDownloadUrl(wallet),
-      extensionDownloadUrl: getExtensionDownloadUrl(wallet),
-      groupName: wallet.groupName,
-      mobileDownloadUrl: getMobileDownloadUrl(wallet),
-      getQrCodeUri: wallet.qrCode?.getUri
-        ? () => getWalletConnectUri(wallet, wallet.qrCode!.getUri!)
-        : undefined,
-      getDesktopUri: wallet.desktop?.getUri
-        ? () => getWalletConnectUri(wallet, wallet.desktop!.getUri!)
-        : undefined,
-      getMobileUri: wallet.mobile?.getUri
-        ? () => getWalletConnectUri(wallet, wallet.mobile?.getUri!)
-        : undefined,
-      recent,
-      showWalletConnectModal: wallet.walletConnectModalConnector
-        ? () => connectToWalletConnectModal(wallet.walletConnectModalConnector!)
-        : undefined,
-    });
+    if (isAptosWallet) {
+      walletConnectors.push({
+        ...wallet,
+        get ready() {
+          return wallet.aptosWalletReady?.() ?? false;
+        },
+        connect: () => connectWallet(wallet),
+        desktopDownloadUrl: getDesktopDownloadUrl(wallet),
+        extensionDownloadUrl: getExtensionDownloadUrl(wallet),
+        groupName:
+          wallet.id !== 'msafe' && wallet.aptosWalletReady?.()
+            ? 'Installed'
+            : wallet.groupName,
+        mobileDownloadUrl: getMobileDownloadUrl(wallet),
+        getQrCodeUri: wallet.qrCode?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.qrCode!.getUri!)
+          : undefined,
+        getDesktopUri: wallet.desktop?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.desktop!.getUri!)
+          : undefined,
+        getMobileUri: wallet.mobile?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.mobile?.getUri!)
+          : undefined,
+        recent,
+      });
+    } else {
+      walletConnectors.push({
+        ...wallet,
+        ready: wallet.installed ?? true,
+        connect: () => connectWallet(wallet),
+        desktopDownloadUrl: getDesktopDownloadUrl(wallet),
+        extensionDownloadUrl: getExtensionDownloadUrl(wallet),
+        groupName: wallet.groupName,
+        mobileDownloadUrl: getMobileDownloadUrl(wallet),
+        getQrCodeUri: wallet.qrCode?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.qrCode!.getUri!)
+          : undefined,
+        getDesktopUri: wallet.desktop?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.desktop!.getUri!)
+          : undefined,
+        getMobileUri: wallet.mobile?.getUri
+          ? () => getWalletConnectUri(wallet, wallet.mobile?.getUri!)
+          : undefined,
+        recent,
+        showWalletConnectModal: wallet.walletConnectModalConnector
+          ? () =>
+              connectToWalletConnectModal(wallet.walletConnectModalConnector!)
+          : undefined,
+      });
+    }
   }
   return walletConnectors;
 }

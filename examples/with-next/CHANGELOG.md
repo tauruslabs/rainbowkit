@@ -1,5 +1,33 @@
 # with-next
 
+## 0.0.93
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.5
+
+## 0.0.92
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.4
+
+## 0.0.91
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.3
+
+## 0.0.90
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.2
+
 ## 0.0.89
 
 ### Patch Changes

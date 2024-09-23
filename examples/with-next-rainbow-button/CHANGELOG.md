@@ -1,5 +1,29 @@
 # with-next-rainbow-button
 
+## 0.0.22
+
+### Patch Changes
+
+- @merkletrade/rainbow-button@0.2.13
+
+## 0.0.21
+
+### Patch Changes
+
+- @merkletrade/rainbow-button@0.2.12
+
+## 0.0.20
+
+### Patch Changes
+
+- @merkletrade/rainbow-button@0.2.11
+
+## 0.0.19
+
+### Patch Changes
+
+- @merkletrade/rainbow-button@0.2.10
+
 ## 0.0.18
 
 ### Patch Changes

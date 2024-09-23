@@ -1,5 +1,41 @@
 # example
 
+## 0.0.103
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.5
+  - @merkletrade/rainbow-button@0.2.13
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.5
+
+## 0.0.102
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.4
+  - @merkletrade/rainbow-button@0.2.12
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.4
+
+## 0.0.101
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.3
+  - @merkletrade/rainbow-button@0.2.11
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.3
+
+## 0.0.100
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.2
+  - @merkletrade/rainbow-button@0.2.10
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.2
+
 ## 0.0.99
 
 ### Patch Changes

@@ -1,5 +1,37 @@
 # with-next-siwe-next-auth
 
+## 0.0.76
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.5
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.5
+
+## 0.0.75
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.4
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.4
+
+## 0.0.74
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.3
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.3
+
+## 0.0.73
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.1.2
+  - @merkletrade/rainbowkit-siwe-next-auth@1.0.2
+
 ## 0.0.72
 
 ### Patch Changes

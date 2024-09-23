@@ -1,5 +1,29 @@
 # @merkletrade/rainbowkit
 
+## 2.1.5
+
+### Patch Changes
+
+- chore: typo
+
+## 2.1.4
+
+### Patch Changes
+
+- chore: exclude msafe to installed group
+
+## 2.1.3
+
+### Patch Changes
+
+- feat: detect aptos wallet injected
+
+## 2.1.2
+
+### Patch Changes
+
+- fix: update aptos wallet connector
+
 ## 2.1.1
 
 ### Patch Changes

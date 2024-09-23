@@ -29,15 +29,18 @@ export const isEIP6963Connector = (wallet: WalletInstance) => {
     !wallet.isRainbowKitConnector &&
     wallet.icon?.startsWith('data:image') &&
     wallet.uid &&
-    !['com.okex.wallet', 'network.pontem', 'com.bitget.web3'].includes(
-      wallet.id,
-    ) &&
+    ![
+      'com.okex.wallet',
+      'network.pontem',
+      'com.bitget.web3',
+      'com.bybit',
+    ].includes(wallet.id) &&
     wallet.name
   );
 };
 
 export const isAptosConnector = (wallet: WalletInstance) => {
-  return !!(wallet.type === 'aptos' && wallet.installed === true);
+  return wallet.type === 'aptos';
 };
 
 export const rainbowKitConnectorWithWalletConnect = (
