@@ -1,5 +1,12 @@
 # with-next
 
+## 0.0.94
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.2.0
+
 ## 0.0.93
 
 ### Patch Changes

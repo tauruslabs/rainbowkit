@@ -1,5 +1,12 @@
 # with-next-siwe-iron-session
 
+## 0.0.76
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.2.0
+
 ## 0.0.75
 
 ### Patch Changes

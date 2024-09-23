@@ -1,5 +1,11 @@
 # @merkletrade/rainbowkit
 
+## 2.2.0
+
+### Minor Changes
+
+- Add bybit
+
 ## 2.1.5
 
 ### Patch Changes

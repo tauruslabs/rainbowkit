@@ -1,5 +1,12 @@
 # generated-test-app
 
+## 0.1.96
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.2.0
+
 ## 0.1.95
 
 ### Patch Changes

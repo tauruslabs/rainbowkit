@@ -1,5 +1,12 @@
 # with-vite
 
+## 0.0.82
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.2.0
+
 ## 0.0.81
 
 ### Patch Changes

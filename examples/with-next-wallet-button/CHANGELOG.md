@@ -1,5 +1,12 @@
 # with-next-wallet-button
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies
+  - @merkletrade/rainbowkit@2.2.0
+
 ## 0.0.22
 
 ### Patch Changes
